@@ -89,7 +89,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <p>
-              I’m a software engineer from Venezuela, focused on backend &
+              I’m a software engineer, focused on backend &
               full-stack development. I care deeply about clean code,
               reliability, and designing systems that stand the test of scale.
             </p>
