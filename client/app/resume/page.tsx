@@ -69,7 +69,7 @@ export default function Resume() {
               </a>
               <div className="flex gap-4 mt-2">
                 <a
-                  href="https://orlandoascanio.com/?src=landing&project=main"
+                  href="https://orlandoascanio.com/?src=landing&project=github"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"

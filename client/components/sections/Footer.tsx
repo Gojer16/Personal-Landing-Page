@@ -6,7 +6,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export default function Footer() {
   const socials = [
     {
-      href: "https://orlandoascanio.com/?src=landing&project=main",
+      href: "https://orlandoascanio.com/?src=landing&project=github",
       label: "GitHub",
       icon: <Github className="w-5 h-5" />,
     },

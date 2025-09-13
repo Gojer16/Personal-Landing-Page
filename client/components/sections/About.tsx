@@ -165,7 +165,7 @@ export default function About() {
           >
             {[
               {
-                href: "https://orlandoascanio.com/?src=landing&project=main",
+                href: "https://orlandoascanio.com/?src=landing&project=github",
                 label: "GitHub",
                 icon: <Github className="w-6 h-6" />,
                 hover: "hover:text-black dark:hover:text-white",

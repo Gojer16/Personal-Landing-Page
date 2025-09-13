@@ -86,7 +86,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Link
-            href="https://orlandoascanio.com/?src=landing&project=main"
+            href="https://orlandoascanio.com/?src=landing&project=github"
             target="_blank"
             aria-label="GitHub"
           >

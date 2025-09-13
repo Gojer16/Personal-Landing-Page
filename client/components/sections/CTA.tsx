@@ -19,7 +19,7 @@ export default function CTA() {
         "bg-white text-blue-600 border border-blue-600 hover:bg-blue-50 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600",
     },
     {
-      href: "https://orlandoascanio.com/?src=landing&project=main",
+      href: "https://orlandoascanio.com/?src=landing&project=github",
       label: "GitHub Profile",
       icon: <Github className="w-5 h-5 mr-2" />,
       style:
