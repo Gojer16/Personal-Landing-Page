@@ -12,7 +12,12 @@ const links = [
   { href: "/projects", label: "Case Studies" },
 ];
 
-function ThemeToggle({ theme, setTheme }: any) {
+interface ThemeToggleProps {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
+
+function ThemeToggle({ theme, setTheme }: ThemeToggleProps) {
   return (
     <motion.button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -100,12 +105,12 @@ export default function Navbar() {
             View Resume →
             </Link>
 
-            {mounted && <ThemeToggle theme={theme} setTheme={setTheme} />}
+            {mounted && <ThemeToggle theme={theme ?? "light"} setTheme={setTheme} />}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
-            {mounted && <ThemeToggle theme={theme} setTheme={setTheme} />}
+            {mounted && <ThemeToggle theme={theme ?? "light"} setTheme={setTheme} />}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"

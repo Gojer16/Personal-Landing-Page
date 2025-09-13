@@ -137,7 +137,7 @@ export default function About() {
                 <h3 className="font-semibold text-gray-800 dark:text-gray-200">
                   {group}
                 </h3>
-                {items.map((skill, index) => (
+                {items.map((skill) => (
                   <motion.span
                     key={skill.name}
                     whileHover={{ scale: 1.05 }}

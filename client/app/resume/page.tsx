@@ -236,7 +236,7 @@ export default function Resume() {
                   {category}
                 </h3>
                 <ul className="space-y-2">
-                  {list.map((skill, j) => (
+                  {list.map((skill) => (
                     <motion.li
                       key={skill}
                       whileHover={{ scale: 1.05 }}

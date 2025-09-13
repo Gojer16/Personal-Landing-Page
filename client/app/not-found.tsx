@@ -30,7 +30,7 @@ export default function Custom404() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-        Sorry, the page you're looking for doesn't exist or has been moved.
+  Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
         </motion.p>
         
         <motion.div
