@@ -58,20 +58,7 @@ export default function ProjectsIndex() {
     });
   }, [allProjects, selectedTech, debouncedSearch]);
 
-  // Highlight helper
-  function highlight(text: string) {
-    if (!debouncedSearch) return text;
-    const regex = new RegExp(`(${debouncedSearch})`, "gi");
-    return text.split(regex).map((part, i) =>
-      part.toLowerCase() === debouncedSearch.toLowerCase() ? (
-        <mark key={i} className="bg-yellow-200 dark:bg-yellow-600 rounded px-1">
-          {part}
-        </mark>
-      ) : (
-        part
-      )
-    );
-  }
+
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4">
@@ -235,7 +222,7 @@ export default function ProjectsIndex() {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
                 >
-                  <ProjectCard project={{ ...project, highlight }} />
+                  <ProjectCard project={project} />
                 </motion.div>
               ))}
             </motion.div>
