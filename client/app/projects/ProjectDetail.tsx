@@ -5,7 +5,27 @@ import { motion } from "framer-motion";
 import projects from "./dataProjects";
 import Custom404 from "../not-found";
 
-export default function ProjectDetail({ project }) {
+// Reuse the Project type from ProjectCard
+type Project = {
+  slug: string;
+  title: string;
+  tagline: string;
+  year?: string | number;
+  image?: string;
+  stack: string[];
+  problem: string;
+  role: string;
+  impact?: string[];
+  impactMetric?: string;
+  demoLink: string;
+  githubLink: string;
+};
+
+interface ProjectDetailProps {
+  project: Project;
+}
+
+export default function ProjectDetail({ project }: ProjectDetailProps) {
   if (!project) return (
   <Custom404 />
 )
@@ -158,15 +178,22 @@ export default function ProjectDetail({ project }) {
 }
 
 /* InfoBlock subcomponent */
-function InfoBlock({ title, text, color, delay }) {
-  const colorMap = {
+
+type InfoBlockProps = {
+  title: string;
+  text: string | string[] | undefined;
+  color: "blue" | "indigo" | "green";
+  delay: number;
+};
+
+function InfoBlock({ title, text, color, delay }: InfoBlockProps) {
+  const colorMap: Record<"blue" | "indigo" | "green", string> = {
     blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
     indigo:
       "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400",
     green:
       "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400",
   };
-
 
   return (
     <motion.div
