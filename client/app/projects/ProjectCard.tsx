@@ -4,7 +4,28 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-export default function ProjectCard({ project }) {
+// Define the Project type based on the project objects in dataProjects.ts
+type Project = {
+  slug: string;
+  title: string;
+  tagline: string;
+  year?: string | number;
+  image?: string;
+  stack: string[];
+  problem: string;
+  role: string;
+  impact?: string[];
+  impactMetric?: string;
+  demoLink: string;
+  githubLink: string;
+};
+
+
+interface ProjectCardProps {
+  project: Project;
+}
+
+export default function ProjectCard({ project }: ProjectCardProps) {
   const [showAllTech, setShowAllTech] = useState(false);
 
 
@@ -128,8 +149,15 @@ const techIcons: Record<string, string> = {
 }
 
 /* Small subcomponent for Problem / Role / Impact */
-function InfoItem({ label, color, text }) {
-  const colors = {
+
+type InfoItemProps = {
+  label: string;
+  color: "blue" | "indigo" | "green";
+  text: string | string[] | undefined;
+};
+
+function InfoItem({ label, color, text }: InfoItemProps) {
+  const colors: Record<"blue" | "indigo" | "green", string> = {
     blue: "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400",
     indigo:
       "bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400",
