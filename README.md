@@ -21,7 +21,7 @@ A modern, animated, and responsive portfolio built with Next.js, TailwindCSS, an
 ## 🛠️ Tech Stack
 
 - **Frontend:** Next.js, TailwindCSS, Framer Motion.
-= **Infra:** Vercel (hosting), Docker (for Flask service).
+- **Infra:** Vercel (hosting).
 
 ## 🚀 Key Features
 
@@ -36,8 +36,8 @@ A modern, animated, and responsive portfolio built with Next.js, TailwindCSS, an
 For professional inquiries, feel free to reach out through any of these channels:
 
 - 📧 Email: [operation927@gmail.com](mailto:operation927@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/orlandoascanio](https://orlandoascanio.com/?src=landing&project=linkedin)
-- 🐱 GitHub: [github.com/orlando](https://orlandoascanio.com/?src=landing&project=main)
+- 💼 LinkedIn: [linkedin.com/in/orlando-ascanio-dev](https://orlandoascanio.com/?src=landing&project=linkedin)
+- 🐱 GitHub: [github.com/Gojer16](https://orlandoascanio.com/?src=landing&project=main)
 
 ---
 
