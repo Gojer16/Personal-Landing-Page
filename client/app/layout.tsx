@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import {Roboto } from "next/font/google"
 import "./globals.css";
+import Script from "next/script";
 import { ThemeProvider } from "next-themes";
 import { Analytics } from "@vercel/analytics/next"
 
@@ -52,16 +52,38 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-NLQ7D3LQ');
+            `,
+          }}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
         <meta name="theme-color" content="#4F46E5" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/pfp.jpg" />
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
+        
       </head>
       <body
         className={`${roboto.className}  antialiased min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white`}
       >
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NLQ7D3LQ"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <Analytics />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
