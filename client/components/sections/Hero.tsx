@@ -111,8 +111,8 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4">
+        {/* CTA buttons |  Improve responsiveness*/}
+        <div className="flex flex-wrap justify-center gap-8 sm:gap-4 mx-auto">
           {/* Primary CTA */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
