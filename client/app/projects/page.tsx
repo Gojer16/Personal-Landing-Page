@@ -31,6 +31,7 @@ export default function ProjectsIndex() {
 
   const [selectedTech, setSelectedTech] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [showAllTechs, setShowAllTechs] = useState(false);
   const debouncedSearch = useDebounce(searchQuery);
 
   // Count how many projects use each tech
@@ -58,8 +59,7 @@ export default function ProjectsIndex() {
     });
   }, [allProjects, selectedTech, debouncedSearch]);
 
-
-
+  
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-16 px-4">
       <div className="max-w-7xl mx-auto">
@@ -135,7 +135,7 @@ export default function ProjectsIndex() {
               >
               All
               </button>
-              {allTechnologies.map((tech) => (
+              {allTechnologies.slice(0, showAllTechs ? allTechnologies.length : 5).map((tech) => (
                 <button
                   key={tech}
                   onClick={() => setSelectedTech(tech)}
@@ -149,6 +149,14 @@ export default function ProjectsIndex() {
                   {tech}
                 </button>
               ))}
+              {allTechnologies.length > 5 && (
+                <button
+                  onClick={() => setShowAllTechs(!showAllTechs)}
+                  className="px-4 py-2 rounded-full text-sm font-medium text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+                >
+                  {showAllTechs ? "Show Less" : "Show All"}
+                </button>
+              )}
             </div>
           </div>
 
