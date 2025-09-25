@@ -46,7 +46,7 @@ export default function Resume() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-            Software Engineer (JavaScript / Python / React).
+            AI Product Engineer | Software Engineer (Full-Stack, AI).
             </motion.p>
 
             {/* Contact Info */}

@@ -11,24 +11,22 @@ export default function About() {
     "inline-flex items-center px-4  py-2 border border-blue-500/40 rounded-full font-medium text-gray-800 dark:text-gray-200 bg-white/40 dark:bg-gray-800/40 shadow-sm hover:shadow-md transition-all";
 
   const skills = {
+    "AI & ML": [
+      { name: "LLMs & RAG", emoji: "🤖" },
+      { name: "Embeddings", emoji: "📚" },
+      { name: "AI Assistants", emoji: "💡" },
+    ],
     Frontend: [
       { name: "JavaScript", emoji: "⚡" },
       { name: "React", emoji: "⚛️" },
       { name: "Next.js", emoji: "🚀" },
-      {name: "Framer Motion", emoji: "🎞️"}
+      { name: "Framer Motion", emoji: "🎞️" },
     ],
-    Backend: [
-      { name: "Python", emoji: "🐍" },
+    "Backend & Cloud": [
       { name: "Node.js", emoji: "🌐" },
-      { name: "MongoDB", emoji: "🍃" },
-      {name: "MySQL & PostgreSQL", emoji: "📦"}
-    ],
-    Tools: [
-      { name: "Docker", emoji: "🐳" },
-      { name: "Git", emoji: "🔧" },
-      {name: "Testing", emoji: "🧪"},
-      {name: "CI/CD", emoji: "🤖"},
-      {name: "AWS", emoji: "☁️"}
+      { name: "FastAPI & Flask", emoji: "🐍" },
+      { name: "SQL/NoSQL", emoji: "🗄️" },
+      { name: "AWS & CI/CD", emoji: "☁️" },
     ],
   };
 
@@ -77,7 +75,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-          “I believe in turning complexity into clarity, building tools that empower users and scale with simplicity.”
+          “I build AI-powered products that turn ideas into tools people actually use, blending full-stack engineering with applied AI.”
           </motion.p>
 
           {/* About Text with contextual depth */}
@@ -88,26 +86,17 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.15 }}
           >
-            <p>
-              I’m a software engineer, focused on backend &
-              full-stack development. I care deeply about clean code,
-              reliability, and designing systems that stand the test of scale.
+             <p>
+              I’m an AI Product Engineer passionate about building AI-powered applications,
+              scalable systems, and cloud-first solutions that solve real-world problems.
             </p>
             <p>
-              Over the last few years, I’ve built{" "}
-              <span className="font-medium">
-                full-stack apps, APIs, and automation tools
-              </span>{" "}
-              with JavaScript, Python, and cloud-native stacks. I’m especially
-              interested in how technology can{" "}
-              <span className="font-medium">
-                simplify complexity and empower people
-              </span>{" "}
-              in their daily lives.
+              My focus is <span className="font-medium">turning ideas into products people love</span>,
+              delivering clean code and scalable architecture.
             </p>
             <p>
               I’m currently open to EU-based remote opportunities where I can
-              contribute to impactful projects and keep growing as a developer.
+              contribute to impactful AI projects and keep growing.
             </p>
           </motion.div>
 

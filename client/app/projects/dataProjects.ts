@@ -46,7 +46,7 @@ const projects = [
     image: "/ai.png",
     stack: ["Gemini API", "API Integration", "Flask", "Python", "AI"],
     problem: "Recruiters and hiring managers often want quick, resume-specific answers without digging through long PDFs.",
-    role: "Back-end Developer / AI Engineer.",
+    role: "Back-end Developer / AI Product Engineer.",
     impact: ["Built a resume-aware chatbot that delivers tailored responses for recruiters, career coaches, or detailed explanations.", "Added streaming + non-streaming modes, making the chatbot responsive and versatile.", "Deployed a lightweight, scalable solution that demonstrates real-world AI integration with Gemini."],
     demoLink: "https://orlandoascanio.com?src=landing&project=portfoliosite",
     githubLink: "https://orlandoascanio.com?src=landing&project=assistant",
@@ -139,9 +139,22 @@ const projects = [
   stack: ["Next.js", "Framer Motion", "TailwindCSS", "TypeScript", "Next-theme"],
   problem: "My domain used to redirect straight to my GitHub profile, dropping recruiters into a noisy environment (repos, commits, forks) with no clear story or context about me.",
   role: "Front-end Developer.",
-  impact: ["Built a dedicated personal landing page that positions me as a Software Engineer (JS / Python / React).", "Showcases my top 3 projects with clear taglines, tech stacks, and CTAs.", "Improved recruiter experience by turning my site into a controlled portfolio hub, not just a code dump."],
+  impact: ["Built a dedicated personal landing page that positions me as an AI Product Engineer (Python / Langchain / React).", "Showcases my top 3 projects with clear taglines, tech stacks, and CTAs.", "Improved recruiter experience by turning my site into a controlled portfolio hub, not just a code dump."],
   demoLink: "https://orlandoascanio.com?src=landing&project=landingsite",
   githubLink: "https://orlandoascanio.com?src=landing&project=landing",
+},
+{
+  slug: "elevare-ai",
+  title: "Elevare AI Assistant.",
+  tagline: "Elevare AI assistant.",
+  year: 2025,
+  image: "/elevare-ai.png",
+  stack: ["Next.js", "TailwindCSS", "TypeScript", "Gemini API", "LangChain", "SQLite", "AI", "AI Chatbot", "Express.js"],
+  problem: "Most to-dos are noise. Elevare guides you toward the vital few that truly matter.",
+  role: "AI Product Engineer / Full-Stack Developer.",
+  impact: ["Developed a seamless chat interface for user interactions.", "Integrated Gemini API for natural language understanding.", "Reflective questions that tap into your motivation and identity, not just tasks. This helps you connect with your deeper purpose before taking action."],
+  demoLink: "https://elevare-ai-assistant-demo.vercel.app/",
+  githubLink: "https://github.com/Gojer16/Elevare-AI-Assistant",
 }
 ];
 

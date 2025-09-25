@@ -12,11 +12,11 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Orlando Ascanio - Software Engineer",
-    default: "Orlando Ascanio | Software Engineer - Full Stack Developer",
+    template: "%s | Orlando Ascanio - AI Product Engineer",
+    default: "Orlando Ascanio | AI Product Engineer - Full-Stack Developer",
   },
-  description: "Software Engineer specializing in JavaScript, Python, and React. Building full-stack applications, secure APIs, and real-world solutions that scale. Check out my portfolio and projects.",
-  keywords: "software engineer, javascript, python, react, full-stack, developer, portfolio, Orlando Ascanio, web development, API development, scalable solutions",
+  description: "AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
+  keywords: "ai product engineer, python, langchain, full-stack, developer, portfolio, Orlando Ascanio, web development, API development, scalable solutions",
   authors: [{ name: "Orlando Ascanio" }],
   creator: "Orlando Ascanio",
   metadataBase: new URL('https://orlandoascanio.com'),
@@ -24,22 +24,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://orlandoascanio.com",
-    title: "Orlando Ascanio | Software Engineer - Full Stack Developer",
-    description: "Software Engineer specializing in JavaScript, Python, and React. Building full-stack applications, secure APIs, and real-world solutions that scale. Check out my portfolio and projects.",
+    title: "Orlando Ascanio | AI Product Engineer - Full-Stack Developer",
+    description: "AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
     siteName: "Orlando Ascanio Portfolio",
     images: [
       {
         url: "/pfp.jpg",
         width: 1200,
         height: 630,
-        alt: "Orlando Ascanio - Software Engineer",
+        alt: "Orlando Ascanio - AI Product Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orlando Ascanio | Software Engineer - Full Stack Developer",
-    description: "Software Engineer specializing in JavaScript, Python, and React. Building full-stack applications, secure APIs, and real-world solutions that scale.",
+    title: "Orlando Ascanio | AI Product Engineer - Full-Stack Developer",
+    description: "AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
     images: ["/pfp.jpg"],
   },
 };

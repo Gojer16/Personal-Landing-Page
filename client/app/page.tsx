@@ -8,12 +8,12 @@ import CTA from '@/components/sections/CTA';
 import Footer from '@/components/sections/Footer';
 
 export const metadata: Metadata = {
-  title: "Home | Orlando Ascanio - Software Engineer",
-  description: "Welcome to my portfolio! I'm a Software Engineer specializing in JavaScript, Python, and React. I build full-stack apps, secure APIs, and real-world solutions that scale.",
-  keywords: "software engineer, javascript, python, react, full-stack, developer, portfolio, Orlando Ascanio, web development, API development",
+  title: "Home | Orlando Ascanio - AI Product Engineer",
+  description: "Welcome to my portfolio! I'm an AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design.",
+  keywords: "ai product engineer, python, langchain, full-stack, developer, portfolio, Orlando Ascanio, web development, API development",
   openGraph: {
-    title: "Home | Orlando Ascanio - Software Engineer",
-    description: "Welcome to my portfolio! I'm a Software Engineer specializing in JavaScript, Python, and React. I build full-stack apps, secure APIs, and real-world solutions that scale.",
+    title: "Home | Orlando Ascanio - AI Product Engineer",
+    description: "Welcome to my portfolio! I'm an AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design.",
     url: "https://orlandoascanio.com",
     siteName: "Orlando Ascanio Portfolio",
   },

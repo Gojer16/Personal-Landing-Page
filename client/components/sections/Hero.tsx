@@ -55,7 +55,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-        Software Engineer (JavaScript / Python / React)
+        AI Product Engineer
         </motion.h2>
 
         {/* Tagline */}
@@ -65,7 +65,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-        Turning complex problems into clean, scalable solutions.
+        Turning complex problems into clean, scalable, AI-powered solutions.
         </motion.p>
 
         {/* Description */}
@@ -75,7 +75,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-        I build full-stack apps, secure APIs, and real-world solutions that scale.
+          I build full-stack apps, secure APIs, and intelligent products that leverage AI to create real-world impact at scale.
         </motion.p>
 
         {/* Social icons row */}

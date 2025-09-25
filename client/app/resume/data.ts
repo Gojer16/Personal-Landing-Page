@@ -1,12 +1,41 @@
-
 export const skills = {
-    Languages: ["JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"],
-    Frameworks: ["React", "Next.js", "TailwindCSS", "Framer Motion", "Zustand", "Node.js", "Express.js", "FastAPI", "Flask"],
-    Databases: ["MongoDB", "MySQL", "PostgreSQL", "SQLite"],
-    Tools: ["Docker", "AWS", "Git", "CI/CD", "Github (Version Control)", "Vercel / Render / Heroku", "Github Actions"],
-    Other: ["APIs & REST Design", "Unit & Integration Testing (Jest)", "OAuth2", "Encryption", "Agile / Scrum", "AI Agents"],
-    Learning: ["Nest.js", "GraphQL", "Microservices Architecture", "MCPs"]
-  };
+  Languages: ["JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"],
+  Frameworks: [
+    "React",
+    "Next.js",
+    "TailwindCSS",
+    "Framer Motion",
+    "Radix UI",
+    "Zustand",
+    "Node.js",
+    "Express.js",
+    "FastAPI",
+    "Flask"
+  ],
+  Databases: ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "Prisma"],
+  Tools: [
+    "Docker",
+    "AWS",
+    "Git",
+    "CI/CD",
+    "Github (Version Control)",
+    "Vercel / Render / Heroku",
+    "Github Actions",
+    "Sentry",
+    "PostHog",
+    "Vercel Analytics"
+  ],
+  Other: [
+    "APIs & REST Design",
+    "Unit & Integration Testing (Jest, Vitest)",
+    "End-to-End Testing (Playwright)",
+    "OAuth2",
+    "Encryption",
+    "Agile / Scrum",
+    "Zod",
+  ],
+  Learning: ["LangChain", "AI Agents", "MCPs"]
+};
 
 export const projects = [
     {
@@ -17,12 +46,29 @@ export const projects = [
       link: "/projects/ikea",
     },
     {
-      title: "Elevare (Productivity App)",
-      description:
-        "Elevare is a modern productivity app designed to help you organize tasks, reflect on progress, and build better daily habits.",
-      stack: ["Next.js", "TailwindCSS", "Framer Motion", "Prisma", "PostgreSQL", "Zustand", "TypeScript"],
-      link: "/projects/elevare",
-    },
+      title: "Elevare",
+    description:
+      "A full-stack productivity app designed to help users build better habits, track progress, and achieve goals through task management, reflection, and gamification.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Radix UI",
+      "Framer Motion",
+      "TanStack Query",
+      "Zod",
+      "Prisma",
+      "PostgreSQL",
+      "Supabase",
+      "NextAuth.js",
+      "Vitest",
+      "Playwright",
+      "Vercel Analytics",
+      "PostHog",
+      "Sentry"
+    ],
+    link: "/projects/elevare"
+  },
     {
       title: "Librora (Book Management App)",
       description:
