@@ -37,7 +37,7 @@ export default function Resume() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-            Orlando Ascanio
+              Orlando Ascanio
             </motion.h1>
 
             <motion.p
@@ -46,7 +46,7 @@ export default function Resume() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-            AI Product Engineer | Software Engineer (Full-Stack, AI).
+            AI Engineer | Software Engineer (Full-Stack, AI)
             </motion.p>
 
             {/* Contact Info */}
@@ -58,7 +58,7 @@ export default function Resume() {
             >
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" aria-hidden="true" />
-              Remote / EU Opportunities.
+              Remote / EU Opportunities
               </p>
               <a
                 href="mailto:operation927@gmail.com"
@@ -106,7 +106,7 @@ export default function Resume() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-          Experience
+          My Experience
           </motion.h2>
 
           <motion.div
@@ -119,19 +119,20 @@ export default function Resume() {
             Software Engineer
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-            Escuela Técnica Industrial Mariano Fernández Fortique • Jan 2025 - April 2025
+              Escuela Técnica Industrial Mariano Fernández Fortique • Jan 2025 - April 2025
             </p>
             <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
               <li>
-               Served as principal developer for the school’s first official website, coordinating with the school’s CS lead, administrators, and staff to define requirements and deliver a production-ready system for 400+ students and staff.
+                I served as principal developer for the school's first official website, coordinating with the CS lead, administrators, and staff to define requirements and deliver a production-ready system for 400+ students and staff.
               </li>
               <li>
-                Secured backend APIs with Node.js + MySQL, cutting unauthorized access attempts by an estimated 15–30% during testing.
-              </li>
-              <li>Delivered a mobile-friendly React front-end, leading to 50%+ of traffic coming from phones within the first month.
+                I secured backend APIs with Node.js + MySQL, cutting unauthorized access attempts by an estimated 15–30% during testing.
               </li>
               <li>
-              Worked in an Agile environment, collaborating with staff and adapting requirements into iterative development cycles.
+                I delivered a mobile-friendly React front-end, leading to 50%+ of traffic coming from phones within the first month.
+              </li>
+              <li>
+                I worked in an Agile environment, collaborating with staff and adapting requirements into iterative development cycles.
               </li>
             </ul>
           </motion.div>
@@ -143,7 +144,7 @@ export default function Resume() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-          Projects Preview
+            My Projects Preview
           </motion.h2>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -155,14 +156,30 @@ export default function Resume() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: i * 0.2 }}
               >
-                <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">
-                {project.title}
-                </h3>
+                <div className="flex justify-between items-start mb-3">
+                  <h3 className="font-semibold text-lg text-gray-900 dark:text-white">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-wrap gap-1">
+                    {project.experienceLevel && (
+                      <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-medium rounded-full">
+                        {project.experienceLevel}
+                      </span>
+                    )}
+                    {project.projectDuration && (
+                      <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs font-medium rounded-full">
+                        {project.projectDuration}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
-                {project.description}
+                  {project.description}
                 </p>
+                
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.stack.map((tech) => (
+                  {project.stack.slice(0, 4).map((tech) => (
                     <span
                       key={tech}
                       className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full dark:bg-blue-900 dark:text-blue-200"
@@ -170,12 +187,79 @@ export default function Resume() {
                       {tech}
                     </span>
                   ))}
+                  {project.stack.length > 4 && (
+                    <span className="px-2 py-1 text-xs bg-gray-100 text-gray-600 rounded-full dark:bg-gray-700 dark:text-gray-400">
+                      +{project.stack.length - 4} more
+                    </span>
+                  )}
                 </div>
+
+                {/* Project Metrics */}
+                {project.metrics && (
+                  <div className="mb-4 p-3 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+                    <h4 className="text-xs font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
+                      Metrics
+                    </h4>
+                    <div className="grid grid-cols-3 gap-2 text-xs">
+                      {project.metrics.linesOfCode && (
+                        <div className="text-center">
+                          <div className="font-bold text-gray-900 dark:text-white">
+                            {project.metrics.linesOfCode.toLocaleString()}
+                          </div>
+                          <div className="text-gray-600 dark:text-gray-400">Lines</div>
+                        </div>
+                      )}
+                      {project.metrics.performance && (
+                        <div className="text-center">
+                          <div className="font-bold text-gray-900 dark:text-white text-xs">
+                            {project.metrics.performance}
+                          </div>
+                          <div className="text-gray-600 dark:text-gray-400">Performance</div>
+                        </div>
+                      )}
+                      {project.metrics.users && (
+                        <div className="text-center">
+                          <div className="font-bold text-gray-900 dark:text-white">
+                            {project.metrics.users}+
+                          </div>
+                          <div className="text-gray-600 dark:text-gray-400">Users</div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Key Learnings */}
+                {project.learnings && project.learnings.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="text-xs font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
+                      Key Learnings
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {project.learnings.slice(0, 2).map((learning, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs rounded"
+                        >
+                          {learning}
+                        </span>
+                      ))}
+                      {project.learnings.length > 2 && (
+                        <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs rounded">
+                          +{project.learnings.length - 2} more
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                )}
+                
                 <Link
                   href={project.link}
                   className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium"
                 >
-                View Case Study <ExternalLink className="w-4 h-4" />
+                  View Case Study <ExternalLink className="w-4 h-4" />
                 </Link>
               </motion.div>
             ))}
@@ -187,7 +271,7 @@ export default function Resume() {
               href="/projects"
               className="px-6 py-3 bg-gradient-to-r from-gray-800 to-black text-white rounded-lg font-medium hover:from-black hover:to-gray-900 transition-all"
             >
-            View All Case Studies →
+              View All My Case Studies →
             </Link>
           </div>
           {/* Education */}
@@ -197,7 +281,7 @@ export default function Resume() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
-          Education
+            My Education
           </motion.h2>
 
           <motion.div
@@ -207,10 +291,10 @@ export default function Resume() {
             transition={{ duration: 0.5, delay: 0.9 }}
           >
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-            B.S. Computer Science
+              B.S. Computer Science
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-            Instituto Universitario de Tecnología “Antonio Ricaurte” (IUTAR). • 2021 - 2025
+              Instituto Universitario de Tecnología "Antonio Ricaurte" (IUTAR) • 2021 - 2025
             </p>
           </motion.div>
 
@@ -221,7 +305,7 @@ export default function Resume() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.0 }}
           >
-          Skills
+            My Skills
           </motion.h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
