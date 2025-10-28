@@ -123,7 +123,7 @@ export default function Resume() {
             </p>
             <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
               <li>
-                I served as principal developer for the school's first official website, coordinating with the CS lead, administrators, and staff to define requirements and deliver a production-ready system for 400+ students and staff.
+                  I served as principal developer for the school&apos;s first official website, coordinating with the CS lead, administrators, and staff to define requirements and deliver a production-ready system for 400+ students and staff.
               </li>
               <li>
                 I secured backend APIs with Node.js + MySQL, cutting unauthorized access attempts by an estimated 15–30% during testing.
@@ -294,7 +294,7 @@ export default function Resume() {
               B.S. Computer Science
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Instituto Universitario de Tecnología "Antonio Ricaurte" (IUTAR) • 2021 - 2025
+            Instituto Universitario de Tecnología &quot;Antonio Ricaurte&quot; (IUTAR) • 2021 - 2025
             </p>
           </motion.div>
 

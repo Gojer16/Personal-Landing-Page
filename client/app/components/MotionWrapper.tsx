@@ -1,5 +1,5 @@
 "use client";
-import { motion, MotionProps, useReducedMotion } from "framer-motion";
+import { motion, MotionProps, useReducedMotion, Easing } from "framer-motion";
 import { ReactNode, forwardRef } from "react";
 
 interface MotionWrapperProps extends MotionProps {
@@ -19,23 +19,23 @@ const MotionWrapper = forwardRef<HTMLDivElement, MotionWrapperProps>(
       entrance: {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as any }
+        transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }
       },
       interaction: {
         whileHover: { scale: 1.02, y: -2 },
         whileTap: { scale: 0.98 },
-        transition: { duration: 0.2, ease: "easeOut" as any }
+  transition: { duration: 0.2, ease: ("easeOut" as unknown as Easing) }
       },
       feedback: {
         initial: { scale: 1 },
         animate: { scale: [1, 1.05, 1] },
-        transition: { duration: 0.3, ease: "easeInOut" as any }
+  transition: { duration: 0.3, ease: ("easeInOut" as unknown as Easing) }
       },
       navigation: {
         initial: { opacity: 0, x: -10 },
         animate: { opacity: 1, x: 0 },
         exit: { opacity: 0, x: 10 },
-        transition: { duration: 0.3, ease: "easeOut" as any }
+  transition: { duration: 0.3, ease: ("easeOut" as unknown as Easing) }
       }
     };
 

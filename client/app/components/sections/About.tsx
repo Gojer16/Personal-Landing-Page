@@ -86,7 +86,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            "I build AI-powered products that turn ideas into tools people actually use, blending full-stack engineering with applied AI."
+            &quot;I build AI-powered products that turn ideas into tools people actually use, blending full-stack engineering with applied AI.&quot;
           </motion.p>
 
           {/* About Text with contextual depth */}
@@ -98,15 +98,15 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.15 }}
           >
             <p>
-              I'm an AI Engineer who gets excited about building AI-powered applications,
+              I&apos;m an AI Engineer who gets excited about building AI-powered applications,
               scalable systems, and cloud-first solutions that solve real-world problems. What drives me most is seeing my code make a tangible difference in how people work and live.
             </p>
             <p>
               My approach centers on <span className="font-medium">turning ideas into products people love</span> —
-              I believe great software should feel intuitive while being built on solid, scalable architecture. I've learned that the best solutions often come from understanding the problem deeply before writing a single line of code.
+              I believe great software should feel intuitive while being built on solid, scalable architecture. I&apos;ve learned that the best solutions often come from understanding the problem deeply before writing a single line of code.
             </p>
             <p>
-              Right now, I'm actively seeking EU-based remote opportunities where I can
+              Right now, I&apos;m actively seeking EU-based remote opportunities where I can
               contribute to impactful AI projects while continuing to grow alongside talented teams. I thrive in environments where innovation meets practical application.
             </p>
           </motion.div>
@@ -213,11 +213,11 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.65 }}
             className="space-y-4"
           >
-            <Link
+              <Link
               href="mailto:operation927@gmail.com"
               className="block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
             >
-              I'm currently open to remote opportunities in Europe. Let's connect!
+              I&apos;m currently open to remote opportunities in Europe. Let&apos;s connect!
             </Link>
             <Link
               href="/projects"

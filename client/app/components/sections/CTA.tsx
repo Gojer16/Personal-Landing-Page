@@ -39,7 +39,7 @@ export default function CTA() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: shouldReduceMotion ? 0.2 : 0.4 }}
         >
-          Let's build something impactful together 🚀
+          Let&apos;s build something impactful together 🚀
         </motion.h2>
 
         {/* Buttons - Purposeful interaction animations only */}

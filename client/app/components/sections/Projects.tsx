@@ -42,8 +42,8 @@ export default function Projects() {
           >
             Projects that define my work.
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Here are some real-world case studies where I've applied automation, AI, and full-stack development to solve meaningful problems.
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Here are some real-world case studies where I&apos;ve applied automation, AI, and full-stack development to solve meaningful problems.
           </p>
         </motion.div>
 

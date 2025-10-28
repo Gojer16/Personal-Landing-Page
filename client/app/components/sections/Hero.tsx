@@ -154,7 +154,7 @@ export default function Hero() {
             dark:bg-gray-800 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 
             dark:focus:ring-offset-gray-900 transform hover:-translate-y-1"
           >
-            💬 Let's Talk
+            💬 Let&apos;s Talk
           </Link>
         </div>
 
