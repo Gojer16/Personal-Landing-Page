@@ -8,7 +8,6 @@ import CTA from '@/app/components/sections/CTA';
 import Footer from '@/app/components/sections/Footer';
 import FixedSocialBar from '@/app/components/FixedSocialBar';
 import { PersonStructuredData, WebsiteStructuredData } from '@/app/components/StructuredData';
-import ScrollProgress from '@/app/components/ScrollProgress';
 
 export const metadata: Metadata = {
   title: "Home | Orlando Ascanio - AI Engineer",
@@ -39,7 +38,6 @@ export default function Home() {
         ]}
       />
       <WebsiteStructuredData />
-      <ScrollProgress />
       <Navbar />
       <FixedSocialBar />
       <section id="hero" className="scroll-mt-16">

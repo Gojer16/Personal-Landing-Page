@@ -3,32 +3,36 @@ import { FaChess } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Globe } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 
 export default function About() {
   const badgeClass =
     "inline-flex items-center px-4  py-2 border border-blue-500/40 rounded-full font-medium text-gray-800 dark:text-gray-200 bg-white/40 dark:bg-gray-800/40 shadow-sm hover:shadow-md transition-all";
 
-  const skills = {
-    "AI & ML": [
-      { name: "LLMs & RAG", emoji: "🤖", years: 2, projects: 5 },
-      { name: "Embeddings", emoji: "📚", years: 2, projects: 3 },
-      { name: "AI Assistants", emoji: "💡", years: 1, projects: 4 },
-    ],
-    Frontend: [
-      { name: "JavaScript", emoji: "⚡", years: 4, projects: 12 },
-      { name: "React", emoji: "⚛️", years: 3, projects: 10 },
-      { name: "Next.js", emoji: "🚀", years: 2, projects: 8 },
-      { name: "Framer Motion", emoji: "🎞️", years: 2, projects: 6 },
-    ],
-    "Backend & Cloud": [
-      { name: "Node.js", emoji: "🌐", years: 3, projects: 8 },
-      { name: "FastAPI & Flask", emoji: "🐍", years: 2, projects: 6 },
-      { name: "SQL/NoSQL", emoji: "🗄️", years: 3, projects: 9 },
-      { name: "AWS & CI/CD", emoji: "☁️", years: 2, projects: 5 },
-    ],
-  };
+const skills = {
+  "AI & Machine Learning": [
+    { name: "LLMs & RAG", emoji: "🧠", years: 2, projects: 5 },
+    { name: "LangChain / LlamaIndex", emoji: "🔗", years: 1, projects: 3 },
+    { name: "Prompt Engineering", emoji: "💬", years: 2, projects: 4 },
+    { name: "Embeddings & Vector DBs", emoji: "📚", years: 1, projects: 1 },
+    { name: "AI Assistants", emoji: "🤖", years: 1, projects: 3 },
+  ],
+  "Frontend Development": [
+    { name: "React.js", emoji: "⚛️", years: 2, projects: "6+" },
+    { name: "Next.js", emoji: "🚀", years: 2, projects: "6+" },
+    { name: "TypeScript / JavaScript", emoji: "⚡", years: 3, projects: "6+" },
+    { name: "TailwindCSS", emoji: "🎨", years: 2, projects: "6+" },
+    { name: "Framer Motion", emoji: "🎞️", years: 2, projects: "6+" },
+  ],
+  "Backend & DevOps": [
+    { name: "Node.js / Express", emoji: "🌐", years: 2, projects: "6+" },
+    { name: "FastAPI / Flask", emoji: "🐍", years: 2, projects: 3 },
+    { name: "SQL / NoSQL", emoji: "🗄️", years: 2, projects: "6+" },
+    { name: "AWS / CI-CD / Docker", emoji: "☁️", years: 2, projects: "6+" },
+    { name: "Authentication & APIs", emoji: "🔒", years: 2, projects: "6+" },
+  ],
+};
 
   return (
     <section id="about" className="py-16 px-4 bg-white dark:bg-gray-900">
@@ -102,11 +106,11 @@ export default function About() {
               scalable systems, and cloud-first solutions that solve real-world problems. What drives me most is seeing my code make a tangible difference in how people work and live.
             </p>
             <p>
-              My approach centers on <span className="font-medium">turning ideas into products people love</span> —
+              My approach centers on <span className="font-medium">turning ideas into products people love</span>.
               I believe great software should feel intuitive while being built on solid, scalable architecture. I&apos;ve learned that the best solutions often come from understanding the problem deeply before writing a single line of code.
             </p>
             <p>
-              Right now, I&apos;m actively seeking EU-based remote opportunities where I can
+              Right now, I&apos;m actively seeking remote opportunities where I can
               contribute to impactful AI projects while continuing to grow alongside talented teams. I thrive in environments where innovation meets practical application.
             </p>
           </motion.div>
@@ -179,12 +183,6 @@ export default function About() {
                 hover: "hover:text-blue-600",
               },
               {
-                href: "https://orlandoascanio.com/?src=landing&project=portfoliosite",
-                label: "Portfolio",
-                icon: <Globe className="w-6 h-6" />,
-                hover: "hover:text-indigo-600",
-              },
-              {
                 href: "mailto:operation927@gmail.com",
                 label: "Email",
                 icon: <Mail className="w-6 h-6" />,
@@ -217,7 +215,7 @@ export default function About() {
               href="mailto:operation927@gmail.com"
               className="block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
             >
-              I&apos;m currently open to remote opportunities in Europe. Let&apos;s connect!
+              I&apos;m currently open to remote opportunities. Let&apos;s connect!
             </Link>
             <Link
               href="/projects"

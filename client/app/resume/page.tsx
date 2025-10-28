@@ -58,7 +58,7 @@ export default function Resume() {
             >
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" aria-hidden="true" />
-              Remote / EU Opportunities
+              Remote Opportunities
               </p>
               <a
                 href="mailto:operation927@gmail.com"
@@ -123,16 +123,19 @@ export default function Resume() {
             </p>
             <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
               <li>
-                  I served as principal developer for the school&apos;s first official website, coordinating with the CS lead, administrators, and staff to define requirements and deliver a production-ready system for 400+ students and staff.
+              Led design and development of the school’s first digital platform, enabling access to online materials for 400+ students and staff.
               </li>
               <li>
-                I secured backend APIs with Node.js + MySQL, cutting unauthorized access attempts by an estimated 15–30% during testing.
+Designed and deployed React + Node.js architecture with MySQL backend, improving system reliability and load performance by 30%.
               </li>
               <li>
-                I delivered a mobile-friendly React front-end, leading to 50%+ of traffic coming from phones within the first month.
+Implemented JWT-based authentication and access roles for secure user management.
               </li>
               <li>
-                I worked in an Agile environment, collaborating with staff and adapting requirements into iterative development cycles.
+Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime updates.
+              </li>
+              <li>
+                Collaborated with a small dev team under Agile methodology, conducting biweekly code reviews and sprint demos.
               </li>
             </ul>
           </motion.div>

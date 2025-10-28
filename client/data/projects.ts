@@ -9,17 +9,21 @@ const projects = [
     problem: "I noticed that modern productivity tools overwhelm users with endless to-do lists, notifications, and features, so, I wanted to create something different.",
     role: "Full-stack Developer / Founder",
     impact: ["I built Elevare to reframe productivity by guiding users to define and commit to their single most important task, helping them focus on what truly matters"],
-    demoLink: "https://orlandoascanio.com?src=landing&project=elevearesite",
-    githubLink: "https://orlandoascanio.com?src=landing&project=elevare",
+    demoLink: "",
+    githubLink: "",
     featured: true,
     experienceLevel: "Senior" as const,
     projectDuration: "1 month",
     metrics: {
-      linesOfCode: 15000,
+      linesOfCode: "15000+",
       performance: "95+ Lighthouse score",
-      users: 50
+      users: 40
     },
-    learnings: ["User-centric design", "Focus-driven productivity patterns", "Full-stack development with Next.js and Prisma"]
+    learnings: [
+  "Designing scalable Prisma schemas and migrations.",
+  "Integrating AI-based task suggestions via LangChain.",
+  "Building analytics workflows with PostHog and Sentry."
+]
   },
   {
     slug: "ikea",
@@ -37,11 +41,16 @@ const projects = [
     experienceLevel: "Expert" as const,
     projectDuration: "1 week",
     metrics: {
-      linesOfCode: 8000,
-      performance: "60fps 3D rendering",
-      users: 25
-    },
-    learnings: ["Three.js scene optimization", "WebGL performance tuning", "Rapid prototyping techniques"]
+  linesOfCode: "9000+",
+  performance: "Stable 60fps 3D rendering",
+  buildSize: "Under 2.5MB optimized bundle",
+  users: 30
+},
+learnings: [
+  "Managing real-time state in complex UI systems with Zustand",
+  "Rapid prototyping under tight deadlines",
+  "Designing interactive 3D user experiences"
+]
   },
   {
     slug: "librora",
@@ -56,13 +65,17 @@ const projects = [
     demoLink: "https://orlandoascanio.com?src=landing&project=librorasite",
     githubLink: "https://orlandoascanio.com?src=landing&project=librora",
     experienceLevel: "Senior" as const,
-    projectDuration: "2 months",
+    projectDuration: "4 months",
     metrics: {
-      linesOfCode: 20000,
-      performance: "99% uptime",
-      users: 100
-    },
-    learnings: ["Production-grade security patterns", "CI/CD with automated testing", "Cloudinary integration optimization"]
+  linesOfCode: "10000+",
+  performance: "99.2% uptime",
+  users: 10
+},
+learnings: [
+  "Production-level API hardening (validation, rate limiting, sanitization).",
+  "CI/CD pipeline automation with GitHub Actions + Docker.",
+  "Role-based authentication and Prisma data modeling.",
+]
   },
   {
     slug: "ai-assistant",
@@ -77,7 +90,7 @@ const projects = [
     demoLink: "https://orlandoascanio.com?src=landing&project=portfoliosite",
     githubLink: "https://orlandoascanio.com?src=landing&project=assistant",
     experienceLevel: "Expert" as const,
-    projectDuration: "3 weeks",
+    projectDuration: "2 weeks",
     metrics: {
       linesOfCode: 5000,
       performance: "<2s response time",
@@ -120,7 +133,7 @@ const projects = [
     githubLink: "https://orlandoascanio.com?src=landing&project=portfolio",
     featured: true,
     experienceLevel: "Senior" as const,
-    projectDuration: "2 weeks",
+    projectDuration: "1 weeks",
     metrics: {
       linesOfCode: 8000,
       performance: "95+ Lighthouse score",
@@ -142,7 +155,7 @@ const projects = [
   demoLink: "https://orlandoascanio.com?src=landing&project=schoolsite",
   githubLink: "https://orlandoascanio.com?src=landing&project=school",
   experienceLevel: "Senior" as const,
-  projectDuration: "6 weeks",
+  projectDuration: "4 months",
   metrics: {
     linesOfCode: 18000,
     performance: "Sub-second load times",
@@ -162,7 +175,7 @@ const projects = [
   demoLink: "https://orlandoascanio.com?src=landing&project=macsite",
   githubLink: "https://orlandoascanio.com?src=landing&project=mac",
   experienceLevel: "Mid" as const,
-  projectDuration: "3 days",
+  projectDuration: "5 days",
   metrics: {
     linesOfCode: 1500,
     performance: "Zero dependencies",
@@ -183,7 +196,7 @@ const projects = [
   demoLink: "https://orlandoascanio.com?src=landing&project=cheapchess",
   githubLink: "https://orlandoascanio.com?src=landing&project=chess",
   experienceLevel: "Senior" as const,
-  projectDuration: "4 weeks",
+  projectDuration: "1 month",
   metrics: {
     linesOfCode: 12000,
     performance: "<200ms latency",
@@ -204,7 +217,7 @@ const projects = [
   demoLink: "https://orlandoascanio.com?src=landing&project=freelancesite",
   githubLink: "https://orlandoascanio.com?src=landing&project=freelance",
   experienceLevel: "Senior" as const,
-  projectDuration: "5 weeks",
+  projectDuration: "6 weeks",
   metrics: {
     linesOfCode: 14000,
     performance: "E-commerce ready",

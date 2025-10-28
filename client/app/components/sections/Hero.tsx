@@ -13,7 +13,6 @@ const SkillBadge = ({ skill, icon }: { skill: string; icon?: string }) => (
 );
 
 export default function Hero() {
-  // Core technologies for immediate display
   const coreSkills = [
     { name: "Python", icon: "🐍" },
     { name: "Langchain", icon: "🔗" },
@@ -116,13 +115,6 @@ export default function Hero() {
           </Link>
           <Link href="mailto:operation927@gmail.com" aria-label="Email">
             <Mail className="w-7 h-7 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors" />
-          </Link>
-          <Link
-            href="https://orlandoascanio.com/?src=landing&project=portfoliosite"
-            target="_blank"
-            aria-label="Portfolio"
-          >
-            <Globe className="w-7 h-7 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors" />
           </Link>
         </div>
 
