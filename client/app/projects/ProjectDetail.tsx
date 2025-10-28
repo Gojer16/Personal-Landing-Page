@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import projects from "./dataProjects";
 import Custom404 from "../not-found";
-import { ProjectStructuredData } from "@/components/StructuredData";
+import { ProjectStructuredData } from "@/app/components/StructuredData";
 
 // Reuse the Project type from ProjectCard
 type Project = {
