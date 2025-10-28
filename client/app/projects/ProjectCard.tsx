@@ -18,6 +18,14 @@ type Project = {
   impactMetric?: string;
   demoLink: string;
   githubLink: string;
+  experienceLevel?: 'Junior' | 'Mid' | 'Senior' | 'Expert';
+  projectDuration?: string;
+  metrics?: {
+    linesOfCode?: number;
+    performance?: string;
+    users?: number;
+  };
+  learnings?: string[];
 };
 
 
@@ -52,10 +60,14 @@ const techIcons: Record<string, string> = {
         <div className="w-full aspect-[16/9] overflow-hidden">
           <Image
             src={project.image}
-            alt={`${project.title} preview`}
+            alt={`${project.title} - ${project.tagline} project screenshot`}
             width={800}
             height={450}
             className="object-cover w-full h-full hover:scale-105 transition-transform"
+            placeholder="blur"
+            blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="lazy"
           />
         </div>
       )}
@@ -75,10 +87,31 @@ const techIcons: Record<string, string> = {
           </div>
         </div>
 
+        {/* Experience Level and Duration */}
+        {(project.experienceLevel || project.projectDuration) && (
+          <div className="flex flex-wrap gap-2 mb-4">
+            {project.experienceLevel && (
+              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-full border border-purple-200 dark:border-purple-700">
+                {project.experienceLevel} Level
+              </span>
+            )}
+            {project.projectDuration && (
+              <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-medium rounded-full border border-orange-200 dark:border-orange-700">
+                {project.projectDuration}
+              </span>
+            )}
+          </div>
+        )}
+
         {/* Tagline */}
         <p className="text-gray-600 dark:text-gray-300 mb-5 text-base">
           {project.tagline}
         </p>
+        
+        {/* DEBUG: Very obvious indicator */}
+        <div className="mb-4 p-3 bg-red-500 text-white font-bold text-center rounded">
+          🚨 DEBUG: ProjectCard is working! 🚨
+        </div>
 
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mb-5">
@@ -117,6 +150,66 @@ const techIcons: Record<string, string> = {
                 : "Impact details not available")
             }
           />
+        </div>
+
+        {/* Debug: Always show metrics section for testing */}
+        <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
+          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+            Project Metrics {project.metrics ? '✅' : '❌'}
+          </h4>
+          {project.metrics ? (
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+              {project.metrics.linesOfCode && (
+                <div className="text-center">
+                  <div className="font-bold text-gray-900 dark:text-white">
+                    {project.metrics.linesOfCode.toLocaleString()}
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400">Lines of Code</div>
+                </div>
+              )}
+              {project.metrics.performance && (
+                <div className="text-center">
+                  <div className="font-bold text-gray-900 dark:text-white">
+                    {project.metrics.performance}
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400">Performance</div>
+                </div>
+              )}
+              {project.metrics.users && (
+                <div className="text-center">
+                  <div className="font-bold text-gray-900 dark:text-white">
+                    {project.metrics.users}+
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400">Users</div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="text-red-500 text-sm">No metrics data found</div>
+          )}
+        </div>
+
+        {/* Debug: Always show learnings section for testing */}
+        <div className="mb-6">
+          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            Key Learnings {project.learnings && project.learnings.length > 0 ? '✅' : '❌'}
+          </h4>
+          {project.learnings && project.learnings.length > 0 ? (
+            <div className="flex flex-wrap gap-2">
+              {project.learnings.map((learning, index) => (
+                <span
+                  key={index}
+                  className="px-2 py-1 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 text-xs rounded border border-green-200 dark:border-green-800"
+                >
+                  {learning}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <div className="text-red-500 text-sm">No learnings data found</div>
+          )}
         </div>
 
         {/* Buttons */}

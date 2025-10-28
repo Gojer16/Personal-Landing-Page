@@ -73,7 +73,7 @@ export default function ProjectsIndex() {
             href="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 mb-8 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
           >
-          ← Back to Home
+            ← Back to Home
           </Link>
         </motion.div>
 
@@ -84,10 +84,10 @@ export default function ProjectsIndex() {
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-          Case Studies
+            My Case Studies
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto mb-12">
-          Check out my projects across full-stack, backend, and AI, each crafted with care, clean code, and a focus on solving real problems for real users.
+            Here are my projects across full-stack, backend, and AI development. Each one represents a problem I was passionate about solving, crafted with care, clean code, and a focus on creating tools that people actually use.
           </p>
         </motion.div>
 
@@ -105,7 +105,7 @@ export default function ProjectsIndex() {
                 htmlFor="search"
                 className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
-              Search Projects
+              Search My Projects
               </label>
               <input
                 type="text"
@@ -203,7 +203,7 @@ export default function ProjectsIndex() {
             role="status"
             aria-live="polite"
           >
-          Showing {filteredProjects.length} of {allProjects.length} projects
+            Showing {filteredProjects.length} of {allProjects.length} projects
           </p>
           {selectedTech !== "All" && (
             <span className="text-sm bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full">
@@ -262,7 +262,7 @@ export default function ProjectsIndex() {
             href="/resume"
             className="inline-block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-indigo-700 transition-all duration-300 shadow-md hover:shadow-lg"
           >
-          View Resume →
+            View My Resume →
           </Link>
         </motion.div>
       </div>
