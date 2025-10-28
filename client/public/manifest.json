@@ -1,0 +1,21 @@
+{
+  "name": "Orlando Ascanio - AI Product Engineer Portfolio",
+  "short_name": "Orlando Portfolio",
+  "description": "AI Engineer specializing in building AI-powered applications and full-stack solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4F46E5",
+  "icons": [
+    {
+      "src": "/pfp.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/pfp.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
