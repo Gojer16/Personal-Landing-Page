@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import projects from "./dataProjects";
 import Custom404 from "../not-found";
+import { ProjectStructuredData } from "@/components/StructuredData";
 
 // Reuse the Project type from ProjectCard
 type Project = {
@@ -19,6 +20,14 @@ type Project = {
   impactMetric?: string;
   demoLink: string;
   githubLink: string;
+  experienceLevel?: 'Junior' | 'Mid' | 'Senior' | 'Expert';
+  projectDuration?: string;
+  metrics?: {
+    linesOfCode?: number;
+    performance?: string;
+    users?: number;
+  };
+  learnings?: string[];
 };
 
 interface ProjectDetailProps {
@@ -36,6 +45,16 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
 
   return (
     <article className="relative py-16 px-4 bg-gradient-to-b from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <ProjectStructuredData
+        name={project.title}
+        description={project.tagline}
+        url={`https://orlandoascanio.com/projects/${project.slug}`}
+        image={project.image ? `https://orlandoascanio.com${project.image}` : "https://orlandoascanio.com/pfp.jpg"}
+        author="Orlando Ascanio"
+        dateCreated={`${project.year}-01-01`}
+        programmingLanguage={project.stack}
+        keywords={[...project.stack, project.role, "Orlando Ascanio", "portfolio", "case study"]}
+      />
       <div className="max-w-5xl mx-auto">
         {/* Back to projects */}
         <motion.div
@@ -65,11 +84,23 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
           {project.tagline}
           </p>
-          {project.year && (
-            <span className="inline-block mt-4 px-4 py-1 text-sm font-medium bg-gray-200 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-300">
-            {project.year}
-            </span>
-          )}
+          <div className="flex flex-wrap justify-center gap-3 mt-4">
+            {project.year && (
+              <span className="px-4 py-1 text-sm font-medium bg-gray-200 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-300">
+                {project.year}
+              </span>
+            )}
+            {project.experienceLevel && (
+              <span className="px-4 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-full border border-purple-200 dark:border-purple-700">
+                {project.experienceLevel} Level
+              </span>
+            )}
+            {project.projectDuration && (
+              <span className="px-4 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-medium rounded-full border border-orange-200 dark:border-orange-700">
+                {project.projectDuration}
+              </span>
+            )}
+          </div>
         </motion.div>
 
         {/* Image */}
@@ -131,6 +162,72 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             delay={0.4}
           />
         </div>
+
+        {/* Project Metrics */}
+        {project.metrics && (
+          <motion.div
+            className="mb-12 p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+              <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
+              Project Metrics
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {project.metrics.linesOfCode && (
+                <div className="text-center p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                    {project.metrics.linesOfCode.toLocaleString()}
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 font-medium">Lines of Code</div>
+                </div>
+              )}
+              {project.metrics.performance && (
+                <div className="text-center p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                  <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
+                    {project.metrics.performance}
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 font-medium">Performance</div>
+                </div>
+              )}
+              {project.metrics.users && (
+                <div className="text-center p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                    {project.metrics.users}+
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-400 font-medium">Users</div>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+
+        {/* Key Learnings */}
+        {project.learnings && project.learnings.length > 0 && (
+          <motion.div
+            className="mb-12 p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+          >
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+              <span className="w-3 h-3 bg-green-500 rounded-full"></span>
+              Key Learnings
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {project.learnings.map((learning, index) => (
+                <div
+                  key={index}
+                  className="p-4 bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300 rounded-lg border border-green-200 dark:border-green-800 font-medium text-center"
+                >
+                  {learning}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        )}
 
         {/* CTA */}
         <motion.div
