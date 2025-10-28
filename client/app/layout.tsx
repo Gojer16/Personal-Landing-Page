@@ -12,11 +12,11 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Orlando Ascanio - AI Product Engineer",
-    default: "Orlando Ascanio | AI Product Engineer - Full-Stack Developer",
+    template: "%s | Orlando Ascanio - AI Engineer",
+    default: "Orlando Ascanio | AI Engineer - Full-Stack Developer",
   },
-  description: "AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
-  keywords: "ai product engineer, python, langchain, full-stack, developer, portfolio, Orlando Ascanio, web development, API development, scalable solutions",
+  description: "AI Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
+  keywords: "ai engineer, python, langchain, full-stack, developer, portfolio, Orlando Ascanio, web development, API development, scalable solutions",
   authors: [{ name: "Orlando Ascanio" }],
   creator: "Orlando Ascanio",
   metadataBase: new URL('https://orlandoascanio.com'),
@@ -24,22 +24,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://orlandoascanio.com",
-    title: "Orlando Ascanio | AI Product Engineer - Full-Stack Developer",
-    description: "AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
+    title: "Orlando Ascanio | AI Engineer - Full-Stack Developer",
+    description: "AI Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
     siteName: "Orlando Ascanio Portfolio",
     images: [
       {
         url: "/pfp.jpg",
         width: 1200,
         height: 630,
-        alt: "Orlando Ascanio - AI Product Engineer",
+        alt: "Orlando Ascanio - AI Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orlando Ascanio | AI Product Engineer - Full-Stack Developer",
-    description: "AI Product Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
+    title: "Orlando Ascanio | AI Engineer - Full-Stack Developer",
+    description: "AI Engineer specializing in building AI-powered applications and full-stack solutions. Expertise in Python, Langchain, and system design. Check out my portfolio and projects.",
     images: ["/pfp.jpg"],
   },
 };
@@ -66,11 +66,17 @@ export default function RootLayout({
           }}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="theme-color" content="#4F46E5" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="google-site-verification" content="your-google-verification-code" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/pfp.jpg" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/pfp.jpg" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://va.vercel-scripts.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         
       </head>
       <body
