@@ -108,10 +108,6 @@ const techIcons: Record<string, string> = {
           {project.tagline}
         </p>
         
-        {/* DEBUG: Very obvious indicator */}
-        <div className="mb-4 p-3 bg-red-500 text-white font-bold text-center rounded">
-          🚨 DEBUG: ProjectCard is working! 🚨
-        </div>
 
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mb-5">
@@ -152,7 +148,7 @@ const techIcons: Record<string, string> = {
           />
         </div>
 
-        {/* Debug: Always show metrics section for testing */}
+        {/* Metrics section */}
         <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
           <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
             <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
@@ -190,7 +186,7 @@ const techIcons: Record<string, string> = {
           )}
         </div>
 
-        {/* Debug: Always show learnings section for testing */}
+        {/* learnings section */}
         <div className="mb-6">
           <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
             <span className="w-2 h-2 bg-green-500 rounded-full"></span>
