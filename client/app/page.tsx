@@ -1,14 +1,14 @@
 import { Metadata } from 'next';
 import { Suspense } from "react";
-import Hero from "../components/sections/Hero";
-import Navbar from "@/components/sections/Navbar";
-import Projects from '@/components/sections/Projects';
-import About from '@/components/sections/About';
-import CTA from '@/components/sections/CTA';
-import Footer from '@/components/sections/Footer';
-import FixedSocialBar from '@/components/FixedSocialBar';
-import { PersonStructuredData, WebsiteStructuredData } from '@/components/StructuredData';
-import ScrollProgress from '@/components/ScrollProgress';
+import Hero from "./components/sections/Hero";
+import Navbar from "@/app/components/sections/Navbar";
+import Projects from '@/app/components/sections/Projects';
+import About from '@/app/components/sections/About';
+import CTA from '@/app/components/sections/CTA';
+import Footer from '@/app/components/sections/Footer';
+import FixedSocialBar from '@/app/components/FixedSocialBar';
+import { PersonStructuredData, WebsiteStructuredData } from '@/app/components/StructuredData';
+import ScrollProgress from '@/app/components/ScrollProgress';
 
 export const metadata: Metadata = {
   title: "Home | Orlando Ascanio - AI Engineer",
