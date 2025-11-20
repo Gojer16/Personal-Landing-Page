@@ -1,7 +1,6 @@
-# Orlando Ascanio - Personal Developer Landing Page Portfolio.
+# Orlando Ascanio - AI & Product Engineer
 
-<img width="1920" height="912" alt="chrome_Ku1PuJ99C0" src="https://github.com/user-attachments/assets/1fe25088-dd30-4489-8416-4d0c176b21db" />
-
+<img width="1920" height="912" alt="Orlando Ascanio Portfolio Preview" src="https://github.com/user-attachments/assets/1fe25088-dd30-4489-8416-4d0c176b21db" />
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -9,36 +8,29 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-black?style=for-the-badge&logo=framer)](https://www.framer.com/motion/)
 
-A modern, animated, and responsive portfolio built with Next.js, TailwindCSS, and Framer Motion. It showcases my projects, resume, and technical journey, with dynamic case study pages for each project.
+A high-performance, AI-integrated portfolio built to showcase **Product Engineering** and **Intelligent Systems**. It features dynamic case studies, an AI-powered resume chatbot, and a polished, motion-rich UI.
 
 ## 🌟 Highlights
 
-- 🌓 **Dark/Light theme** toggle with smooth animations.
-- 📂 **Projects** with **case study pages** (/projects/[slug]).
-- 🎨 **Smooth animations** powered by **Framer Motion.**
-- 🔍 **SEO-friendly,** mobile-first, and blazing fast.
+- 🧠 **AI-Powered Resume Chatbot:** An integrated RAG-lite assistant that answers recruiter questions about my experience.
+- 📂 **Deep-Dive Case Studies:** Comprehensive technical breakdowns of selected high-impact projects, emphasizing architectural decisions, complex problem-solving, and scalable design patterns.
+- 🎨 **Premium UX:** Smooth page transitions, micro-interactions, and a refined dark/light mode using **Framer Motion**.
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Next.js, TailwindCSS, Framer Motion.
-- **Infra:** Vercel (hosting).
-
-## 🚀 Key Features
-
-- Dynamic **Projects Showcase** with detailed case studies (problem, role, impact).
-- **Custom** 404 Page.
-- **Reusable** UI components: ProjectCard, ThemeToggle, InfoBlocks.
-- **Smooth scroll** + accessible navigation.
-
+- **Core:** Next.js, TypeScript.
+- **Styling:** TailwindCSS, Framer Motion.
+- **AI & Backend:** Google Gemini API.
+- **Infrastructure:** Vercel.
 
 ## 📞 Contact
 
-For professional inquiries, feel free to reach out through any of these channels:
+I am currently open to **remote opportunities** in AI Engineering and Full-Stack Product Development.
 
-- 📧 Email: [operation927@gmail.com](mailto:operation927@gmail.com)
-- 💼 LinkedIn: [linkedin.com/in/orlando-ascanio-dev](https://orlandoascanio.com/?src=landing&project=linkedin)
-- 🐱 GitHub: [github.com/Gojer16](https://orlandoascanio.com/?src=landing&project=main)
-
+- 📧 **Email:** [operation927@gmail.com](mailto:operation927@gmail.com)
+- 💼 **LinkedIn:** [linkedin.com/in/orlando-ascanio-dev](https://www.linkedin.com/in/orlando-ascanio-dev)
+- 🐱 **GitHub:** [github.com/Gojer16](https://github.com/Gojer16)
+    
 ---
 
-*Built with ❤️ using Next.js and TypeScript*
+*Engineered with precision. Built for impact.*
