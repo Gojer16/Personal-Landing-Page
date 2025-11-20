@@ -1,6 +1,6 @@
 # Orlando Ascanio - AI & Product Engineer
 
-<img width="1920" height="912" alt="Orlando Ascanio Portfolio Preview" src="https://github.com/user-attachments/assets/1fe25088-dd30-4489-8416-4d0c176b21db" />
+<img width="1920" height="912" alt="Orlando Ascanio Portfolio Preview" src="https://github.com/user-attachments/assets/1e0de69f-72cd-4a1c-8d19-cfdf5f298616" />
 
 [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
