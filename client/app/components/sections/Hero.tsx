@@ -27,9 +27,9 @@ export default function Hero() {
         <motion.div
           className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
           animate={{ y: [0, 20, 0], scale: [1, 1.05, 1] }}
-          transition={{ 
-            duration: 20, 
-            repeat: Infinity, 
+          transition={{
+            duration: 20,
+            repeat: Infinity,
             ease: "easeInOut",
             repeatType: "reverse"
           }}
@@ -38,9 +38,9 @@ export default function Hero() {
         <motion.div
           className="absolute top-1/3 right-1/4 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
           animate={{ y: [0, -15, 0], scale: [1, 1.08, 1] }}
-          transition={{ 
-            duration: 25, 
-            repeat: Infinity, 
+          transition={{
+            duration: 25,
+            repeat: Infinity,
             ease: "easeInOut",
             repeatType: "reverse"
           }}
@@ -49,9 +49,9 @@ export default function Hero() {
         <motion.div
           className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
           animate={{ y: [0, 10, 0], scale: [1, 1.06, 1] }}
-          transition={{ 
-            duration: 30, 
-            repeat: Infinity, 
+          transition={{
+            duration: 30,
+            repeat: Infinity,
             ease: "easeInOut",
             repeatType: "reverse"
           }}
@@ -71,7 +71,7 @@ export default function Hero() {
             whileHover={{ rotate: [0, 15, -15, 0] }}
             transition={{ duration: 0.6 }}
           >
-            <FaChess className="text-purple-600"/>
+            <FaChess className="text-purple-600" />
           </motion.span>
         </h1>
 
@@ -94,7 +94,7 @@ export default function Hero() {
 
         {/* Description - loads immediately */}
         <p className="text-md md:text-lg mb-10 text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          I specialize in Python, Langchain, and modern web technologies to create intelligent products that deliver measurable impact. My passion lies in turning complex ideas into tools people actually use.
+          I specialize in Python, LangChain, and modern web technologies to create intelligent products that deliver measurable impact. My passion lies in turning complex ideas into tools people actually use.
         </p>
 
         {/* Social icons row - loads immediately */}
