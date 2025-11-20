@@ -36,8 +36,8 @@ interface ProjectDetailProps {
 
 export default function ProjectDetail({ project }: ProjectDetailProps) {
   if (!project) return (
-  <Custom404 />
-)
+    <Custom404 />
+  )
 
   // Find index & next project
   const index = projects.findIndex((p) => p.slug === project.slug);
@@ -67,7 +67,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             href="/projects"
             className="inline-flex items-center text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
           >
-          ← Back to all projects
+            ← Back to all projects
           </Link>
         </motion.div>
 
@@ -79,20 +79,15 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-          {project.title}
+            {project.title}
           </h1>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
-          {project.tagline}
+            {project.tagline}
           </p>
           <div className="flex flex-wrap justify-center gap-3 mt-4">
             {project.year && (
               <span className="px-4 py-1 text-sm font-medium bg-gray-200 dark:bg-gray-700 rounded-full text-gray-700 dark:text-gray-300">
                 {project.year}
-              </span>
-            )}
-            {project.experienceLevel && (
-              <span className="px-4 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-full border border-purple-200 dark:border-purple-700">
-                {project.experienceLevel} Level
               </span>
             )}
             {project.projectDuration && (
@@ -135,7 +130,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 key={i}
                 className="px-4 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 text-blue-700 dark:text-blue-300 text-sm font-medium rounded-full border border-blue-100 dark:border-blue-800 shadow-sm"
               >
-              {tech}
+                {tech}
               </span>
             ))}
           </motion.div>
@@ -241,14 +236,14 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             target="_blank"
             className="px-6 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center"
           >
-          🚀 Live Demo
+            🚀 Live Demo
           </Link>
           <Link
             href={project.githubLink}
             target="_blank"
             className="px-6 py-3.5 rounded-lg bg-gray-800 text-white font-semibold shadow-md hover:shadow-lg hover:-translate-y-1 transition-all text-center"
           >
-          💻 GitHub
+            💻 GitHub
           </Link>
         </motion.div>
 
@@ -265,7 +260,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               href={`/projects/${nextProject.slug}`}
               className="inline-block px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold shadow-md hover:shadow-lg hover:-translate-y-1 transition-all"
             >
-            {nextProject.title}
+              {nextProject.title}
             </Link>
           </motion.div>
         )}
