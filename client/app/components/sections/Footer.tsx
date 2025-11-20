@@ -6,13 +6,13 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export default function Footer() {
   const socials = [
     {
-      href: "https://github.com/orlandoascanio",
+      href: "https://github.com/gojer16",
       label: "GitHub",
       icon: <Github className="w-5 h-5" />,
       hoverColor: "hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800",
     },
     {
-      href: "https://linkedin.com/in/orlandoascanio",
+      href: "https://www.linkedin.com/in/orlando-ascanio-dev",
       label: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
       hoverColor: "hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20",
@@ -48,7 +48,7 @@ export default function Footer() {
           <p className="text-gray-600 dark:text-gray-400 mb-4">
             Ready to collaborate? Reach out through any of these channels.
           </p>
-          
+
           {/* Enhanced Social Links */}
           <motion.div
             className="flex justify-center gap-4 mb-4"
@@ -136,7 +136,7 @@ export default function Footer() {
 
         {/* Trust Signal */}
         <p className="mt-6 text-center text-xs text-gray-500 dark:text-gray-600">
-        Built with Next.js, Tailwind, and ❤️. Deployed on Vercel
+          Built with Next.js, Tailwind, and ❤️. Deployed on Vercel
         </p>
       </div>
     </footer>
