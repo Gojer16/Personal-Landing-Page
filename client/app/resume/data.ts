@@ -1,40 +1,35 @@
 export const skills = {
-  Languages: ["JavaScript", "TypeScript", "Python", "HTML", "CSS", "SQL"],
-  Frameworks: [
-    "React",
+  "AI & Intelligent Systems": [
+    "LLMs & RAG",
+    "LangChain / LlamaIndex",
+    "Prompt Engineering",
+    "Embeddings & Vector DBs",
+    "AI Assistants",
+    "Python",
+    "Advanced NLP & Text Processing",
+    "Multi-language Processing",
+    "Structured Output Design",
+    "AI API Integration"
+  ],
+  "Product Engineering": [
+    "React.js",
     "Next.js",
+    "TypeScript / JavaScript",
     "TailwindCSS",
     "Framer Motion",
     "Radix UI",
-    "Zustand",
-    "Node.js",
-    "Express.js",
-    "FastAPI",
-    "Flask"
+    "shadcn/ui",
+    "Zustand"
   ],
-  Databases: ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "Prisma"],
-  Tools: [
-    "Docker",
-    "AWS",
-    "Git",
-    "CI/CD",
-    "Github (Version Control)",
-    "Vercel / Render / Heroku",
-    "Github Actions",
-    "Sentry",
-    "PostHog",
-    "Vercel Analytics"
-  ],
-  Other: [
-    "APIs & REST Design",
-    "Unit & Integration Testing (Jest, Vitest)",
-    "End-to-End Testing (Playwright)",
-    "OAuth2",
-    "Encryption",
-    "Agile / Scrum",
-    "Zod",
-  ],
-  Learning: ["LangChain", "AI Agents", "MCPs"]
+  "System Architecture": [
+    "Node.js / Express",
+    "FastAPI / Flask",
+    "SQL / NoSQL",
+    "AWS / CI-CD / Docker",
+    "Authentication & APIs",
+    "Prisma / PostgreSQL",
+    "Git / GitHub Actions"
+  ]
 };
 
 type ResumeProject = {
@@ -42,10 +37,8 @@ type ResumeProject = {
   description: string;
   stack: string[];
   link: string;
-  experienceLevel?: 'Junior' | 'Mid' | 'Senior' | 'Expert';
   projectDuration?: string;
   metrics?: {
-    linesOfCode?: number;
     performance?: string;
     users?: number;
   };
@@ -53,23 +46,66 @@ type ResumeProject = {
 };
 
 export const projects: ResumeProject[] = [
-    {
-      title: "Room Planner Prototype",
-      description:
-        "I built an Ikea Kreativ-inspired 3D room design prototype using Next.js + React Three Fiber to validate rapid 3D development concepts.",
-      stack: ["Next.js", "Three.js", "React Three Fiber", "TailwindCSS"],
-      link: "/projects/ikea",
-      experienceLevel: "Expert" as const,
-      projectDuration: "1 week",
-      metrics: {
-        linesOfCode: 8000,
-        performance: "60fps 3D rendering",
-        users: 25
-      },
-      learnings: ["Three.js scene optimization", "WebGL performance tuning", "Rapid prototyping techniques"]
+  {
+    title: "AI Customer Interview Analyzer",
+    description:
+      "I developed an end-to-end AI pipeline that transforms raw transcripts into structured insights in <10 seconds, reducing manual analysis time by 95%+. Built with Next.js, TypeScript, and Google Gemini API.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Google Gemini API",
+      "Tailwind CSS",
+      "Radix UI",
+      "shadcn/ui",
+      "jsPDF"
+    ],
+    link: "/projects/ai-interview-analyzer",
+    projectDuration: "1 week",
+    metrics: {
+      performance: "<10s analysis time",
+      users: 1
     },
-    {
-      title: "Elevare",
+    learnings: [
+      "LLM-powered extraction systems",
+      "Multi-stage prompting strategies",
+      "Inference latency optimization",
+      "Structured output schema design",
+      "Text preprocessing pipelines"
+    ]
+  },
+  {
+    title: "FluentMaker",
+    description:
+      "I built an AI-driven flashcard generator that transforms raw text into contextual learning data, supporting 14 languages with smart vocabulary extraction and LLM-powered sentence generation.",
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Gemini API",
+      "DeepSeek API",
+      "Wiktionary API",
+      "Zod",
+      "LLMs",
+      "NLP",
+      "Jest",
+      "React Testing Library"
+    ],
+    link: "/projects/fluentmaker",
+    projectDuration: "3 weeks",
+    metrics: {
+      performance: "<10s generation time",
+      users: 55
+    },
+    learnings: [
+      "Multi-language NLP processing",
+      "LLM prompt optimization",
+      "Grammar-aware metadata extraction",
+      "Quality-control metrics for AI output",
+      "Multi-format export pipelines"
+    ]
+  },
+  {
+    title: "Elevare",
     description:
       "I created a full-stack productivity app that helps users build better habits, track progress, and achieve goals through focused task management, reflection, and gamification.",
     stack: [
@@ -91,42 +127,31 @@ export const projects: ResumeProject[] = [
       "Sentry"
     ],
     link: "/projects/elevare",
-    experienceLevel: "Senior" as const,
-    projectDuration: "3 months",
+    projectDuration: "1 month",
     metrics: {
-      linesOfCode: 15000,
       performance: "95+ Lighthouse score",
-      users: 50
+      users: 14
     },
-    learnings: ["Advanced Next.js 14 app router patterns", "Supabase real-time subscriptions", "Complex form validation with Zod"]
+    learnings: [
+      "Designed a full end-to-end product workflow from idea validation to UI/UX, architecture, and deployment.",
+      "Implemented secure authentication and session management using NextAuth.js with a custom Prisma adapter.",
+      "Applied TanStack Query for cache invalidation, optimistic updates, and real-time UI sync.",
+      "Integrated analytics (Vercel Analytics + PostHog) to measure user behavior, feature adoption, and retention patterns.",
+      "Added monitoring, logging, and error tracking with Sentry for production-grade reliability.",
+      "Implemented CI/CD test pipelines using Vitest and Playwright for both unit and end-to-end testing.",
+    ]
   },
-    {
-      title: "Librora (Book Management App)",
-      description:
-        "I developed a SaaS-style book management platform that combines a global catalog with personal libraries and reading analytics.",
-      stack: ["Next.js", "TailwindCSS", "Framer Motion", "Express.js", "Joi", "MongoDB", "Cloudinary", "TypeScript"],
-      link: "/projects/librora",
-      experienceLevel: "Senior" as const,
-      projectDuration: "2 months",
-      metrics: {
-        linesOfCode: 20000,
-        performance: "99% uptime",
-        users: 100
-      },
-      learnings: ["Production-grade security patterns", "CI/CD with automated testing", "Cloudinary integration optimization"]
-    }, 
-    {
-        title: "Online Resume Website",
-        description: "I built a responsive portfolio with full-page scroll, animations, and an AI chatbot guide to showcase my work interactively.",
-        stack: ["React", "Framer Motion", "TailwindCSS", "Flask", "Gemini API", "AI Chatbot"],
-        link: "/projects/portfolio",
-        experienceLevel: "Senior" as const,
-        projectDuration: "2 weeks",
-        metrics: {
-          linesOfCode: 8000,
-          performance: "95+ Lighthouse score",
-          users: 200
-        },
-        learnings: ["Full-page scroll animations", "AI chatbot integration", "Modern portfolio design patterns"]
-     }
-  ];
+  {
+    title: "Room Planner Prototype",
+    description:
+      "I built an Ikea Kreativ-inspired 3D room design prototype using Next.js + React Three Fiber to validate rapid 3D development concepts.",
+    stack: ["Next.js", "Three.js", "React Three Fiber", "TailwindCSS"],
+    link: "/projects/ikea",
+    projectDuration: "1 week",
+    metrics: {
+      performance: "60fps 3D rendering",
+      users: 1
+    },
+    learnings: ["Three.js scene optimization", "WebGL performance tuning", "Rapid prototyping techniques"]
+  }
+];
