@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, MapPin, ExternalLink  } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, ExternalLink } from "lucide-react";
 import { skills, projects } from './data'
 
 export default function Resume() {
@@ -18,7 +18,7 @@ export default function Resume() {
             href="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 mb-8 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
           >
-          ← Back to Home
+            ← Back to Home
           </Link>
         </motion.div>
 
@@ -46,7 +46,7 @@ export default function Resume() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-            AI Engineer | Software Engineer (Full-Stack, AI)
+              AI Engineer | Software Engineer (Full-Stack, AI)
             </motion.p>
 
             {/* Contact Info */}
@@ -58,18 +58,18 @@ export default function Resume() {
             >
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" aria-hidden="true" />
-              Remote Opportunities
+                Remote Opportunities
               </p>
               <a
                 href="mailto:operation927@gmail.com"
                 className="flex items-center gap-2 hover:text-blue-600 dark:hover:text-blue-400 transition"
               >
                 <Mail className="w-4 h-4" aria-hidden="true" />
-              operation927@gmail.com
+                operation927@gmail.com
               </a>
               <div className="flex gap-4 mt-2">
                 <a
-                  href="https://orlandoascanio.com/?src=landing&project=github"
+                  href="https://github.com/gojer16"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -78,7 +78,7 @@ export default function Resume() {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://orlandoascanio.com/?src=landing&project=linkedin"
+                  href="https://www.linkedin.com/in/orlando-ascanio-dev"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -95,7 +95,7 @@ export default function Resume() {
               target="_blank"
               className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all shadow"
             >
-            Download PDF
+              Download PDF
             </Link>
           </div>
 
@@ -106,7 +106,7 @@ export default function Resume() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-          My Experience
+            My Experience
           </motion.h2>
 
           <motion.div
@@ -116,23 +116,23 @@ export default function Resume() {
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-            Software Engineer
+              Software Engineer
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
               Escuela Técnica Industrial Mariano Fernández Fortique • Jan 2025 - April 2025
             </p>
             <ul className="mt-2 list-disc list-inside text-gray-700 dark:text-gray-300">
               <li>
-              Led design and development of the school’s first digital platform, enabling access to online materials for 400+ students and staff.
+                Led design and development of the school’s first digital platform, enabling access to online materials for 400+ students and staff.
               </li>
               <li>
-Designed and deployed React + Node.js architecture with MySQL backend, improving system reliability and load performance by 30%.
+                Designed and deployed React + Node.js architecture with MySQL backend, improving system reliability and load performance by 30%.
               </li>
               <li>
-Implemented JWT-based authentication and access roles for secure user management.
+                Implemented JWT-based authentication and access roles for secure user management.
               </li>
               <li>
-Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime updates.
+                Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime updates.
               </li>
               <li>
                 Collaborated with a small dev team under Agile methodology, conducting biweekly code reviews and sprint demos.
@@ -140,7 +140,7 @@ Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime
             </ul>
           </motion.div>
 
-           {/* Projects Preview */}
+          {/* Projects Preview */}
           <motion.h2
             className="text-2xl font-bold mt-12 mb-6 text-gray-900 dark:text-white border-t border-gray-300 dark:border-gray-700 pt-6"
             initial={{ opacity: 0, y: 20 }}
@@ -164,11 +164,6 @@ Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime
                     {project.title}
                   </h3>
                   <div className="flex flex-wrap gap-1">
-                    {project.experienceLevel && (
-                      <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-xs font-medium rounded-full">
-                        {project.experienceLevel}
-                      </span>
-                    )}
                     {project.projectDuration && (
                       <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-xs font-medium rounded-full">
                         {project.projectDuration}
@@ -176,11 +171,11 @@ Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime
                     )}
                   </div>
                 </div>
-                
+
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
                   {project.description}
                 </p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.stack.slice(0, 4).map((tech) => (
                     <span
@@ -257,7 +252,7 @@ Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime
                     </div>
                   </div>
                 )}
-                
+
                 <Link
                   href={project.link}
                   className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 text-sm font-medium"
@@ -297,7 +292,7 @@ Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime
               B.S. Computer Science
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
-            Instituto Universitario de Tecnología &quot;Antonio Ricaurte&quot; (IUTAR) • 2021 - 2025
+              Instituto Universitario de Tecnología &quot;Antonio Ricaurte&quot; (IUTAR) • 2021 - 2025
             </p>
           </motion.div>
 
@@ -318,22 +313,21 @@ Built automated deployment pipelines (GitHub Actions + Docker) for zero-downtime
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 1.1 + i * 0.1 }}
+                className="bg-gray-50 dark:bg-gray-900/50 rounded-xl p-4 border border-gray-100 dark:border-gray-800"
               >
-                <h3 className="font-semibold text-gray-900 dark:text-white capitalize mb-2">
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-3 border-b border-gray-200 dark:border-gray-700 pb-2">
                   {category}
                 </h3>
-                <ul className="space-y-2">
+                <div className="flex flex-wrap gap-2">
                   {list.map((skill) => (
-                    <motion.li
+                    <span
                       key={skill}
-                      whileHover={{ scale: 1.05 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="px-3 py-1 inline-block bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-800 rounded-full dark:from-blue-900 dark:to-indigo-900 dark:text-blue-200"
+                      className="px-2 py-1 text-xs font-medium bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded border border-gray-200 dark:border-gray-700 shadow-sm"
                     >
                       {skill}
-                    </motion.li>
+                    </span>
                   ))}
-                </ul>
+                </div>
               </motion.div>
             ))}
           </div>
