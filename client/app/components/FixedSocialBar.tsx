@@ -5,14 +5,14 @@ import { Github, Linkedin, Mail } from "lucide-react";
 export default function FixedSocialBar() {
   const socials = [
     {
-      href: "https://github.com/orlandoascanio",
+      href: "https://github.com/gojer16",
       label: "GitHub",
       icon: <Github className="w-5 h-5" />,
       color: "hover:text-gray-900 dark:hover:text-white",
     },
     {
-      href: "https://linkedin.com/in/orlandoascanio",
-      label: "LinkedIn", 
+      href: "https://www.linkedin.com/in/orlando-ascanio-dev",
+      label: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
       color: "hover:text-blue-600 dark:hover:text-blue-400",
     },
