@@ -164,13 +164,13 @@ export default function About() {
           >
             {[
               {
-                href: "https://orlandoascanio.com/?src=landing&project=github",
+                href: "https://github.com/gojer16",
                 label: "GitHub",
                 icon: <Github className="w-6 h-6" />,
                 hover: "hover:text-black dark:hover:text-white",
               },
               {
-                href: "https://orlandoascanio.com/?src=landing&project=linkedin",
+                href: "https://www.linkedin.com/in/orlando-ascanio-dev",
                 label: "LinkedIn",
                 icon: <Linkedin className="w-6 h-6" />,
                 hover: "hover:text-blue-600",

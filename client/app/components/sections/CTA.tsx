@@ -4,7 +4,7 @@ import { FileText, Linkedin, Github, Mail } from "lucide-react";
 
 export default function CTA() {
   const shouldReduceMotion = useReducedMotion();
-  
+
   const ctas = [
     {
       href: "/resume",
@@ -14,14 +14,14 @@ export default function CTA() {
         "bg-gradient-to-r from-blue-600 to-indigo-700 text-white hover:from-blue-700 hover:to-indigo-800",
     },
     {
-      href: "https://orlandoascanio.com/?src=landing&project=linkedin",
+      href: "https://www.linkedin.com/in/orlando-ascanio-dev",
       label: "LinkedIn Profile",
       icon: <Linkedin className="w-5 h-5 mr-2" />,
       style:
         "bg-white text-blue-600 border border-blue-600 hover:bg-blue-50 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:hover:bg-gray-600",
     },
     {
-      href: "https://orlandoascanio.com/?src=landing&project=github",
+      href: "https://github.com/gojer16",
       label: "GitHub Profile",
       icon: <Github className="w-5 h-5 mr-2" />,
       style:

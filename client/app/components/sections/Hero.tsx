@@ -100,14 +100,14 @@ export default function Hero() {
         {/* Social icons row - loads immediately */}
         <div className="flex justify-center gap-6 mb-12">
           <Link
-            href="https://orlandoascanio.com/?src=landing&project=github"
+            href="https://github.com/gojer16"
             target="_blank"
             aria-label="GitHub"
           >
             <Github className="w-7 h-7 text-gray-600 dark:text-gray-300 hover:text-blue-600 transition-colors" />
           </Link>
           <Link
-            href="https://orlandoascanio.com/?src=landing&project=linkedin"
+            href="https://www.linkedin.com/in/orlando-ascanio-dev"
             target="_blank"
             aria-label="LinkedIn"
           >
