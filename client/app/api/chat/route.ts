@@ -17,7 +17,7 @@ export async function POST(req: Request) {
                 role: "model",
                 parts: [{ text: systemPrompt }],
             },
-            ...messages.map((m: any) => ({
+            ...messages.map((m: { role: string; content: string }) => ({
                 role: m.role,
                 parts: [{ text: m.content }],
             })),
