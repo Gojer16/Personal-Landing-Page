@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Globe } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { FaChess } from "react-icons/fa6";
 
 // Skill badges component for immediate display

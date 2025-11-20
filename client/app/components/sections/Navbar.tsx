@@ -12,11 +12,7 @@ const links = [
   { href: "/projects", label: "Case Studies" },
 ];
 
-// Quick action links for immediate access
-const quickActions = [
-  { href: "mailto:operation927@gmail.com", label: "Email", icon: "✉️" },
-  { href: "/resume", label: "Resume", icon: "📄" },
-];
+
 
 // Smooth scroll function for internal links
 const smoothScrollTo = (elementId: string) => {
@@ -59,7 +55,7 @@ export default function Navbar() {
 
   useEffect(() => setMounted(true), []);
 
-  
+
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
     const observer = new IntersectionObserver(
@@ -83,7 +79,7 @@ export default function Navbar() {
             href="/"
             className="text-xl font-bold text-gray-800 dark:text-gray-100"
           >
-          Orlando Ascanio<span className="text-blue-600">.</span>
+            Orlando Ascanio<span className="text-blue-600">.</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -91,7 +87,7 @@ export default function Navbar() {
             {links.map((link) => {
               const isInternalLink = link.href.startsWith('#');
               const sectionId = link.href.replace('#', '');
-              
+
               return isInternalLink ? (
                 <button
                   key={link.href}
@@ -99,20 +95,18 @@ export default function Navbar() {
                   aria-current={
                     activeSection === sectionId ? "page" : undefined
                   }
-                  className={`relative group transition-colors ${
-                    activeSection === sectionId
+                  className={`relative group transition-colors ${activeSection === sectionId
                       ? "text-blue-600 dark:text-blue-400 font-semibold"
                       : "text-gray-700 dark:text-gray-300"
-                  } hover:text-blue-600 dark:hover:text-blue-400`}
+                    } hover:text-blue-600 dark:hover:text-blue-400`}
                 >
                   {link.label}
                   {/* Enhanced underline animation with better visual feedback */}
                   <span
-                    className={`absolute left-0 -bottom-1 h-[2px] w-full bg-gradient-to-r from-blue-600 to-indigo-600 transform origin-left transition-transform duration-300 ${
-                      activeSection === sectionId
+                    className={`absolute left-0 -bottom-1 h-[2px] w-full bg-gradient-to-r from-blue-600 to-indigo-600 transform origin-left transition-transform duration-300 ${activeSection === sectionId
                         ? "scale-x-100"
                         : "scale-x-0 group-hover:scale-x-100"
-                    }`}
+                      }`}
                   />
                 </button>
               ) : (
@@ -187,7 +181,7 @@ export default function Navbar() {
               {links.map((link) => {
                 const isInternalLink = link.href.startsWith('#');
                 const sectionId = link.href.replace('#', '');
-                
+
                 return isInternalLink ? (
                   <button
                     key={link.href}
@@ -195,11 +189,10 @@ export default function Navbar() {
                       smoothScrollTo(sectionId);
                       setIsOpen(false);
                     }}
-                    className={`block w-full text-left py-2 px-3 rounded-md transition-colors ${
-                      activeSection === sectionId
+                    className={`block w-full text-left py-2 px-3 rounded-md transition-colors ${activeSection === sectionId
                         ? "text-blue-600 dark:text-blue-400 font-semibold bg-blue-50 dark:bg-blue-900/20"
                         : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800"
-                    }`}
+                      }`}
                   >
                     {link.label}
                   </button>
@@ -223,7 +216,7 @@ export default function Navbar() {
                 <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide px-3">
                   Quick Actions
                 </p>
-                
+
                 <a
                   href="mailto:operation927@gmail.com"
                   onClick={() => setIsOpen(false)}

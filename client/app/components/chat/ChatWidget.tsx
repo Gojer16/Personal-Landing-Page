@@ -14,7 +14,6 @@ export default function ChatWidget() {
     const [inputValue, setInputValue] = useState("");
     const [messages, setMessages] = useState<Message[]>([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const abortControllerRef = useRef<AbortController | null>(null);
 
@@ -40,7 +39,6 @@ export default function ChatWidget() {
         setMessages((prev) => [...prev, userMessage]);
         setInputValue("");
         setIsLoading(true);
-        setError(null);
 
         // Create abort controller for this request
         abortControllerRef.current = new AbortController();
@@ -89,10 +87,9 @@ export default function ChatWidget() {
                 });
             }
 
-            setError(null);
-        } catch (error: any) {
+        } catch (error: unknown) {
             // Handle abort
-            if (error.name === 'AbortError') {
+            if (error instanceof Error && error.name === 'AbortError') {
                 console.log('Request aborted');
                 return;
             }
@@ -100,17 +97,16 @@ export default function ChatWidget() {
             console.error("Chat Error:", error);
 
             // Retry logic for network errors
-            if (retryCount < 2 && error.message?.includes('fetch')) {
+            if (retryCount < 2 && error instanceof Error && error.message?.includes('fetch')) {
                 console.log(`Retrying... (${retryCount + 1}/2)`);
                 setTimeout(() => sendMessage(content, retryCount + 1), 1000);
                 return;
             }
 
-            const errorMessage = error.message?.includes('500')
+            const errorMessage = error instanceof Error && error.message?.includes('500')
                 ? "The AI is temporarily unavailable. Please try again in a moment."
                 : "Sorry, I encountered an error. Please try again.";
 
-            setError(errorMessage);
             setMessages((prev) => [
                 ...prev,
                 {
@@ -151,7 +147,7 @@ export default function ChatWidget() {
                             <div className="flex items-center gap-2">
                                 <Sparkles className="w-5 h-5" />
                                 <div>
-                                    <h3 className="font-bold text-sm">Orlando's AI Assistant</h3>
+                                    <h3 className="font-bold text-sm">Orlando&apos;s AI Assistant</h3>
                                     <p className="text-xs text-blue-100">Ask me anything about his work!</p>
                                 </div>
                             </div>
@@ -178,7 +174,7 @@ export default function ChatWidget() {
                         <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50 dark:bg-gray-950/50">
                             {messages.length === 0 && (
                                 <div className="text-center text-gray-500 dark:text-gray-400 mt-10">
-                                    <p className="text-sm mb-2">👋 Hi! I'm Orlando's AI assistant.</p>
+                                    <p className="text-sm mb-2">👋 Hi! I&apos;m Orlando&apos;s AI assistant.</p>
                                     <p className="text-xs">Ask me about his projects, skills, or experience.</p>
                                     <div className="mt-4 flex flex-wrap justify-center gap-2">
                                         <button

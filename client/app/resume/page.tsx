@@ -200,14 +200,7 @@ export default function Resume() {
                       Metrics
                     </h4>
                     <div className="grid grid-cols-3 gap-2 text-xs">
-                      {project.metrics.linesOfCode && (
-                        <div className="text-center">
-                          <div className="font-bold text-gray-900 dark:text-white">
-                            {project.metrics.linesOfCode.toLocaleString()}
-                          </div>
-                          <div className="text-gray-600 dark:text-gray-400">Lines</div>
-                        </div>
-                      )}
+
                       {project.metrics.performance && (
                         <div className="text-center">
                           <div className="font-bold text-gray-900 dark:text-white text-xs">
