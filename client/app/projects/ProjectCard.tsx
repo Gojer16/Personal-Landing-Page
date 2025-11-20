@@ -18,7 +18,6 @@ type Project = {
   impactMetric?: string;
   demoLink: string;
   githubLink: string;
-  experienceLevel?: 'Junior' | 'Mid' | 'Senior' | 'Expert';
   projectDuration?: string;
   metrics?: {
     linesOfCode?: number;
@@ -28,7 +27,6 @@ type Project = {
   learnings?: string[];
 };
 
-
 interface ProjectCardProps {
   project: Project;
 }
@@ -36,17 +34,16 @@ interface ProjectCardProps {
 export default function ProjectCard({ project }: ProjectCardProps) {
   const [showAllTech, setShowAllTech] = useState(false);
 
-
-const techIcons: Record<string, string> = {
-  React: "⚛️",
-  "Next.js": "⏭️",
-  "Node.js": "🟩",
-  Python: "🐍",
-  AWS: "☁️",
-  "Socket.io": "🔌",
-  "Chess.js": "♟️",
-  Flask: "🥤",
-};
+  const techIcons: Record<string, string> = {
+    React: "⚛️",
+    "Next.js": "⏭️",
+    "Node.js": "🟩",
+    Python: "🐍",
+    AWS: "☁️",
+    "Socket.io": "🔌",
+    "Chess.js": "♟️",
+    Flask: "🥤",
+  };
 
   return (
     <motion.div
@@ -88,13 +85,8 @@ const techIcons: Record<string, string> = {
         </div>
 
         {/* Experience Level and Duration */}
-        {(project.experienceLevel || project.projectDuration) && (
+        {(project.projectDuration) && (
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.experienceLevel && (
-              <span className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 text-sm font-medium rounded-full border border-purple-200 dark:border-purple-700">
-                {project.experienceLevel} Level
-              </span>
-            )}
             {project.projectDuration && (
               <span className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 text-sm font-medium rounded-full border border-orange-200 dark:border-orange-700">
                 {project.projectDuration}
@@ -107,7 +99,7 @@ const techIcons: Record<string, string> = {
         <p className="text-gray-600 dark:text-gray-300 mb-5 text-base">
           {project.tagline}
         </p>
-        
+
 
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mb-5">
@@ -149,12 +141,12 @@ const techIcons: Record<string, string> = {
         </div>
 
         {/* Metrics section */}
-        <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
-          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
-            <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
-            Project Metrics {project.metrics ? '✅' : '❌'}
-          </h4>
-          {project.metrics ? (
+        {project.metrics && (
+          <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
+            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+              <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+              Project Metrics
+            </h4>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
               {project.metrics.linesOfCode && (
                 <div className="text-center">
@@ -181,18 +173,16 @@ const techIcons: Record<string, string> = {
                 </div>
               )}
             </div>
-          ) : (
-            <div className="text-red-500 text-sm">No metrics data found</div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* learnings section */}
-        <div className="mb-6">
-          <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-            Key Learnings {project.learnings && project.learnings.length > 0 ? '✅' : '❌'}
-          </h4>
-          {project.learnings && project.learnings.length > 0 ? (
+        {project.learnings && project.learnings.length > 0 && (
+          <div className="mb-6">
+            <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+              <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+              Key Learnings
+            </h4>
             <div className="flex flex-wrap gap-2">
               {project.learnings.map((learning, index) => (
                 <span
@@ -203,10 +193,8 @@ const techIcons: Record<string, string> = {
                 </span>
               ))}
             </div>
-          ) : (
-            <div className="text-red-500 text-sm">No learnings data found</div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -265,7 +253,17 @@ function InfoItem({ label, color, text }: InfoItemProps) {
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-1">
           {label}
         </h4>
-        <p className="text-gray-600 dark:text-gray-400 text-sm">{text}</p>
+        <div className="text-gray-600 dark:text-gray-400 text-sm">
+          {Array.isArray(text) ? (
+            <ul className="list-disc pl-4 space-y-1">
+              {text.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{text}</p>
+          )}
+        </div>
       </div>
     </div>
   );
