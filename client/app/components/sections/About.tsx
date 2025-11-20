@@ -5,34 +5,30 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
-
 export default function About() {
-  const badgeClass =
-    "inline-flex items-center px-4  py-2 border border-blue-500/40 rounded-full font-medium text-gray-800 dark:text-gray-200 bg-white/40 dark:bg-gray-800/40 shadow-sm hover:shadow-md transition-all";
-
-const skills = {
-  "AI & Machine Learning": [
-    { name: "LLMs & RAG", emoji: "🧠", years: 2, projects: 5 },
-    { name: "LangChain / LlamaIndex", emoji: "🔗", years: 1, projects: 3 },
-    { name: "Prompt Engineering", emoji: "💬", years: 2, projects: 4 },
-    { name: "Embeddings & Vector DBs", emoji: "📚", years: 1, projects: 1 },
-    { name: "AI Assistants", emoji: "🤖", years: 1, projects: 3 },
-  ],
-  "Frontend Development": [
-    { name: "React.js", emoji: "⚛️", years: 2, projects: "6+" },
-    { name: "Next.js", emoji: "🚀", years: 2, projects: "6+" },
-    { name: "TypeScript / JavaScript", emoji: "⚡", years: 3, projects: "6+" },
-    { name: "TailwindCSS", emoji: "🎨", years: 2, projects: "6+" },
-    { name: "Framer Motion", emoji: "🎞️", years: 2, projects: "6+" },
-  ],
-  "Backend & DevOps": [
-    { name: "Node.js / Express", emoji: "🌐", years: 2, projects: "6+" },
-    { name: "FastAPI / Flask", emoji: "🐍", years: 2, projects: 3 },
-    { name: "SQL / NoSQL", emoji: "🗄️", years: 2, projects: "6+" },
-    { name: "AWS / CI-CD / Docker", emoji: "☁️", years: 2, projects: "6+" },
-    { name: "Authentication & APIs", emoji: "🔒", years: 2, projects: "6+" },
-  ],
-};
+  const skills = {
+    "AI & Intelligent Systems": [
+      { name: "LLMs & RAG", emoji: "🧠" },
+      { name: "LangChain / LlamaIndex", emoji: "🔗" },
+      { name: "Prompt Engineering", emoji: "💬" },
+      { name: "Embeddings & Vector DBs", emoji: "📚" },
+      { name: "AI Assistants", emoji: "🤖" },
+    ],
+    "Product Engineering": [
+      { name: "React.js", emoji: "⚛️" },
+      { name: "Next.js", emoji: "🚀" },
+      { name: "TypeScript / JavaScript", emoji: "⚡" },
+      { name: "TailwindCSS", emoji: "🎨" },
+      { name: "Framer Motion", emoji: "🎞️" },
+    ],
+    "System Architecture": [
+      { name: "Node.js / Express", emoji: "🌐" },
+      { name: "FastAPI / Flask", emoji: "🐍" },
+      { name: "SQL / NoSQL", emoji: "🗄️" },
+      { name: "AWS / CI-CD / Docker", emoji: "☁️" },
+      { name: "Authentication & APIs", emoji: "🔒" },
+    ],
+  };
 
   return (
     <section id="about" className="py-16 px-4 bg-white dark:bg-gray-900">
@@ -48,7 +44,7 @@ const skills = {
           About Me
           <motion.span
             title="I love chess, strategy fuels my coding."
-            whileHover={{ 
+            whileHover={{
               rotate: [0, 15, -15, 0],
               scale: [1, 1.1, 1]
             }}
@@ -63,14 +59,14 @@ const skills = {
           {/* Avatar - Subtle interaction feedback */}
           <motion.div
             className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg ring-offset-2 focus:ring-2 focus:ring-blue-400"
-            whileHover={{ 
+            whileHover={{
               scale: 1.03,
               borderColor: "#4F46E5"
             }}
             transition={{ duration: 0.2, ease: "easeOut" }}
           >
             <Image
-              src="/pfp.jpg" 
+              src="/pfp.jpg"
               alt="Orlando Ascanio - AI Engineer and Full-Stack Developer"
               width={128}
               height={128}
@@ -124,12 +120,12 @@ const skills = {
             transition={{ duration: 0.5, delay: 0.2 }}
           />
 
-          {/* Skills Grouped */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          {/* Skills Grouped - Refined Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {Object.entries(skills).map(([group, items], groupIndex) => (
               <motion.div
                 key={group}
-                className="space-y-3"
+                className="space-y-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -138,25 +134,22 @@ const skills = {
                   delay: 0.25 + groupIndex * 0.1,
                 }}
               >
-                <h3 className="font-semibold text-gray-800 dark:text-gray-200">
+                <h3 className="font-semibold text-lg text-gray-900 dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2 mb-4">
                   {group}
                 </h3>
-                {items.map((skill) => (
-                  <motion.div
-                    key={skill.name}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.2 }}
-                    className={`${badgeClass} flex-col items-center text-center`}
-                  >
-                    <div className="flex items-center gap-1 mb-1">
-                      <span aria-hidden="true">{skill.emoji}</span>
-                      <span className="font-medium">{skill.name}</span>
-                    </div>
-                    <div className="text-xs text-gray-600 dark:text-gray-400">
-                      {skill.years} years • {skill.projects} projects
-                    </div>
-                  </motion.div>
-                ))}
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  {items.map((skill) => (
+                    <motion.div
+                      key={skill.name}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="flex items-center gap-2 px-4 py-2 bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md hover:border-blue-400 dark:hover:border-blue-500 transition-colors cursor-default"
+                    >
+                      <span className="text-xl" aria-hidden="true">{skill.emoji}</span>
+                      <span className="font-medium text-sm text-gray-700 dark:text-gray-200">{skill.name}</span>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </div>
@@ -211,7 +204,7 @@ const skills = {
             transition={{ duration: 0.5, delay: 0.65 }}
             className="space-y-4"
           >
-              <Link
+            <Link
               href="mailto:operation927@gmail.com"
               className="block px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
             >
